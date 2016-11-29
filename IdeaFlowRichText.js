@@ -1,7 +1,8 @@
 import React from 'react';
-import {EditorState, ContentState} from 'draft-js';
+import {EditorState, ContentState, CompositeDecorator} from 'draft-js';
 import Editor from 'draft-js-plugins-editor';
 import {List} from 'immutable';
+import findWithRegex from 'find-with-regex'
 
 import createSuggestionPlugin from './plugin'
 import suggestionFactory from './plugin/suggestionFactory'
@@ -9,14 +10,17 @@ import suggestionFactory from './plugin/suggestionFactory'
 import './styles/IdeaFlowRichText.scss';
 import './styles/Draft.scss';
 
-const tagPrefix = '#';
-const mentionPrefix = '@';
+const TAG_PREFIX = '#';
+const MENTION_PREFIX = '@';
 
 //TODO: remove duplication in plugin definitions
-const tagSuggestionPlugin = createSuggestionPlugin({suggestionPrefix: tagPrefix});
+const MENTION_REGEX = new RegExp(`${MENTION_PREFIX}(\\w|\\d|_|-|\\.)+`, 'g');
+const TAG_REGEX = new RegExp(`${TAG_PREFIX}(\\w|\\d|_|-|\\.)+`, 'g');
+
+const tagSuggestionPlugin = createSuggestionPlugin({suggestionPrefix: TAG_PREFIX});
 const TagSuggestionsComponent = tagSuggestionPlugin.CompletionSuggestions;
 
-const mentionSuggestionPlugin = createSuggestionPlugin({suggestionPrefix: mentionPrefix});
+const mentionSuggestionPlugin = createSuggestionPlugin({suggestionPrefix: MENTION_PREFIX});
 const MentionSuggestionsComponent = mentionSuggestionPlugin.CompletionSuggestions;
 
 const plugins = [tagSuggestionPlugin, mentionSuggestionPlugin];
@@ -25,8 +29,34 @@ export default class IdeaFlowRichText extends React.Component {
   constructor (props) {
     super(props);
 
+    this._decorator = new CompositeDecorator([
+      {
+        strategy: (contentBlock, callback) => {
+          findWithRegex(MENTION_REGEX, contentBlock, callback);
+        },
+
+        component: (props) => {
+          console.log('>>>> rendering mention span: ', props);
+          return <span className='mention'>{props.decoratedText}</span>;
+        }
+      },
+
+      {
+        strategy: (contentBlock, callback) => {
+          findWithRegex(TAG_REGEX, contentBlock, callback);
+        },
+
+        component: (props) => {
+          console.log('>>>> rendering tag span: ', props);
+          return <span className='tag'>{props.decoratedText}</span>;
+        }
+      },
+    ]);
+
+    const contentState = ContentState.createFromText(this.props.initialContents);
     this.state = {
-      editorState: EditorState.createWithContent(ContentState.createFromText(this.props.initialContents)),
+      editorState: EditorState.createWithContent(contentState, this._decorator),
+      // editorState: EditorState.createWithContent(contentState),
       tagSuggestions: List(),
       mentionSuggestions: List(),
     };
@@ -36,10 +66,10 @@ export default class IdeaFlowRichText extends React.Component {
     const currentContents = this.getPlainTextFromEditorState(this.state.editorState)
     const newContents = this.getPlainTextFromEditorState(newEditorState)
 
-    let needNorifyParent = currentContents != newContents;
+    let needNotifyParent = currentContents != newContents;
 
     //parent cares only about text changes
-    if (needNorifyParent) {
+    if (needNotifyParent) {
       this.props.onChange(newContents);
     }
 
@@ -54,7 +84,7 @@ export default class IdeaFlowRichText extends React.Component {
   render () {
     const allTagSuggestions = this.props.tags.map((tagName) => suggestionFactory.createForTag({
       name: tagName,
-      prefix: tagPrefix
+      prefix: TAG_PREFIX
     }))
 
     const onTagSearchChange = ({value}) => {
@@ -67,7 +97,7 @@ export default class IdeaFlowRichText extends React.Component {
       nickname: mention.get('nickname'),
       fullName: mention.get('fullName'),
       avatarUrl: mention.get('avatarUrl'),
-      prefix: mentionPrefix
+      prefix: MENTION_PREFIX
     }))
 
     const onMentionSearchChange = ({value}) => {

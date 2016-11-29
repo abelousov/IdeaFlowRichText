@@ -6,7 +6,7 @@ import {fromJS} from 'immutable';
 import IdeaFlowRichText from '../IdeaFlowRichText'
 
 const AppRoot = () => {
-  const initialRichTextContents = "Hello user! try typing '@' and '#' to use auto-completion"
+  const initialRichTextContents = "Hello user! try typing '@' and '#' to use auto-completion. That's what you can get: tag - #idea, mention - @jacob"
 
   const tags = fromJS(['idea', 'ideal', 'deal']);
 

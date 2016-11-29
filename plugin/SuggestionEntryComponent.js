@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import Immutable from 'immutable';
 
 import './suggestionsEntryStyles.scss';
 

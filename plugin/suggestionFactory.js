@@ -57,7 +57,7 @@ class MentionSuggestion {
   }
 
   getTextForEditor () {
-    return `${this.nickname} (${this.fullName})`
+    return this.getPrefix() + this.nickname
   }
 
   getPrefix () {
