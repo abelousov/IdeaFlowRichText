@@ -1,0 +1,35 @@
+{
+  "name": "ideaflow-rich-text",
+  "description": "Rich text editor for IdeaFlow",
+  "version": "0.0.1",
+  "author": {
+    "name": "Anton Belousov",
+    "email": "anton.n.belousov@gmail.com"
+  },
+  "dependencies": {
+    "draft-js": "^0.9.1",
+    "draft-js-autocomplete-plugin-creator": "^0.2.0",
+    "draft-js-plugins-editor": "^2.0.0-beta1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.22.0",
+    "immutable": "^3.8.1",
+    "node-sass": "^3.8.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config.babel.js --progress"
+  }
+}
