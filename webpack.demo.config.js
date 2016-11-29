@@ -2,7 +2,7 @@ let path = require('path')
 let HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: './app.js',
+  entry: './demo/app.js',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'
@@ -31,7 +31,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html', // Load a custom template
+      template: './demo/index.html', // Load a custom template
       inject: 'body' // Inject all scripts into the body
     })
   ]

@@ -9,7 +9,8 @@
   "dependencies": {
     "draft-js": "^0.9.1",
     "draft-js-autocomplete-plugin-creator": "^0.2.0",
-    "draft-js-plugins-editor": "^2.0.0-beta1"
+    "draft-js-plugins-editor": "^2.0.0-beta1",
+    "find-with-regex": "latest"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
@@ -29,7 +30,8 @@
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.14.1"
   },
+  "main": "components/IdeaFlowRichText.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.babel.js --progress"
+    "start": "webpack-dev-server --config webpack.demo.config.js --progress"
   }
 }

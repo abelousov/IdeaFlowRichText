@@ -1,30 +1,35 @@
-import createCompletionPlugin from 'draft-js-autocomplete-plugin-creator';
+import completionPluginCreator from 'draft-js-autocomplete-plugin-creator'
 
-import issueSuggestionsStrategy from './findIssueSuggestionStrategy';
-import suggestionsFilter from './issueSuggestionsFilter';
-import addIssueModifier from './addIssueModifier';
-import IssueEntry from './IssueEntry';
+import suggestionInserter from './suggestionInserter'
+import SuggestionEntryComponent from './SuggestionEntryComponent'
+import findWithRegex from 'find-with-regex'
 
-import './issueSuggestionsEntryStyles.scss';
-import './issueSuggestionsStyles.scss';
+import './suggestionsEntryStyles.scss'
+import './suggestionsStyles.scss'
 
-const createIssueSuggestionPlugin = (config = {}) => {
-  const defaultTheme = {
-    issueSuggestions: 'issueSuggestions',
+const themeKey = 'suggestions'
+
+const createIssueSuggestionPlugin = ({suggestionPrefix}) => {
+
+  const SUGGESTION_PREFIX_REGEX = new RegExp(`(\\s|^)${suggestionPrefix}[^\\s]*`, 'g')
+
+  //this looks like a strategy to check for start of autocompleted entities
+  const completionSuggestionStrategy = (contentBlock, callback) => {
+    findWithRegex(SUGGESTION_PREFIX_REGEX, contentBlock, callback);
   };
-  const completionPlugin = createCompletionPlugin(
-    issueSuggestionsStrategy,
-    addIssueModifier,
-    IssueEntry,
-    'issueSuggestions',
-  );
-  const configWithTheme = {
-    theme: defaultTheme,
-    ...config,
-  };
-  return completionPlugin(configWithTheme);
+
+  const completionPluginFactory = completionPluginCreator(
+    completionSuggestionStrategy,
+    suggestionInserter,
+    SuggestionEntryComponent,
+    themeKey
+  )
+
+  return completionPluginFactory({
+    theme: {
+      [themeKey]: themeKey
+    }
+  })
 };
 
-export default createIssueSuggestionPlugin;
-
-export const defaultSuggestionsFilter = suggestionsFilter;
+export default createIssueSuggestionPlugin

@@ -1,17 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import Immutable from 'immutable';
 
-import './issueSuggestionsEntryStyles.scss';
+import './suggestionsEntryStyles.scss';
 
-export default class IssueEntry extends Component {
-
-  static propTypes = {
-    completion: PropTypes.instanceOf(Immutable.Map).isRequired,
-    index: PropTypes.number.isRequired,
-    isFocused: PropTypes.bool.isRequired,
-    onCompletionFocus: PropTypes.func.isRequired,
-    onCompletionSelect: PropTypes.func.isRequired,
-  };
+export default class SuggestionEntryComponent extends Component {
 
   constructor(props) {
     super(props);
@@ -41,7 +33,10 @@ export default class IssueEntry extends Component {
   };
 
   render() {
-    const className = this.props.isFocused ? 'issueSuggestionsEntryFocused' : 'issueSuggestionsEntry';
+    const className = this.props.isFocused ? 'suggestionsEntryFocused' : 'suggestionsEntry';
+
+    const suggestionView = this.props.completion.renderOptionView();
+
     return (
       <div
         className={className}
@@ -50,9 +45,8 @@ export default class IssueEntry extends Component {
         onMouseEnter={this.onMouseEnter}
         role='option'
       >
-        <span className='issueSuggestionsEntryText'>
-          <span className='bold'>{`#${this.props.completion.get('id')}`}</span>
-          <span>{` ${this.props.completion.get('subject')}`}</span>
+        <span className='suggestionsEntryText'>
+          {suggestionView}
         </span>
       </div>
     );
