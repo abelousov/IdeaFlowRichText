@@ -37,7 +37,6 @@ class TagSuggestion {
 
 class MentionSuggestion {
   constructor(nickname, fullName, avatarUrl, prefix) {
-    console.log('>>>> constructing mention suggestion: ', {nickname, fullName, avatarUrl, prefix});
     this.nickname = nickname;
     this.fullName = fullName;
     this.avatarUrl = avatarUrl;
