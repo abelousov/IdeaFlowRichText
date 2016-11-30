@@ -32,6 +32,7 @@
   },
   "main": "components/IdeaFlowRichText.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.demo.config.js --progress"
+    "start": "webpack-dev-server --config webpack.demo.config.js --progress",
+    "build": "webpack --config webpack.demo.config.js --progress"
   }
 }
