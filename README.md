@@ -2,7 +2,10 @@
 
 The editor allows to use `@mentions` and `#tags` and is a modified version of https://github.com/mjrussell/draft-js-autocomplete-plugin-creator/tree/master/examples/issue
 
-To view demo (the code is in `demo/app.js`):
+## Demo
+* View demo online - http://htmlpreview.github.io/?https://github.com/abelousov/IdeaFlowRichText/blob/master/dist/index.html
+
+* View demo locally (the code is in `demo/app.js`):
 
 1. `npm install`
 2. `npm start` 
