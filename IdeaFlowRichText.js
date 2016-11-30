@@ -57,26 +57,21 @@ export default class IdeaFlowRichText extends React.Component {
   focus = () => this.refs.editor.focus();
 
   render () {
+    const createAutocompleteDecorator = (regex, autocompleteType) => {
+      return {
+        strategy: (contentBlock, callback) => {
+          findWithRegex(regex, contentBlock, callback);
+        },
+
+        component: (props) => {
+          return <span className={autocompleteType}>{props.children}</span>
+        }
+      }
+    }
+
     const decorators = [
-      {
-        strategy: (contentBlock, callback) => {
-          findWithRegex(MENTION_REGEX, contentBlock, callback);
-        },
-
-        component: (props) => {
-          return <span className='mention'>{props.children}</span>
-        }
-      },
-
-      {
-        strategy: (contentBlock, callback) => {
-          findWithRegex(TAG_REGEX, contentBlock, callback);
-        },
-
-        component: (props) => {
-          return <span className='tag'>{props.children}</span>
-        }
-      },
+      createAutocompleteDecorator(MENTION_REGEX, 'mention'),
+      createAutocompleteDecorator(TAG_REGEX, 'tag')
     ];
 
     const allTagSuggestions = this.props.tags.map((tagName) => suggestionFactory.createForTag({
