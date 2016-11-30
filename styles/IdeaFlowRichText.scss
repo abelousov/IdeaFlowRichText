@@ -7,8 +7,16 @@
   margin-bottom: 2em;
   box-shadow: inset 0px 1px 8px -3px #ABABAB;
   background: #fefefe;
-}
 
-.editor :global(.public-DraftEditor-content) {
-  min-height: 140px;
+  .mention {
+    background-color: azure;
+  }
+
+  .tag {
+    background-color: bisque;
+  }
+
+  :global(.public-DraftEditor-content) {
+    min-height: 140px;
+  }
 }

@@ -64,8 +64,7 @@ export default class IdeaFlowRichText extends React.Component {
         },
 
         component: (props) => {
-          return <mention className='mention'>{props.children}</mention>;
-          return <span className='mention'>{props.decoratedText}</span>
+          return <span className='mention'>{props.children}</span>
         }
       },
 
@@ -75,9 +74,7 @@ export default class IdeaFlowRichText extends React.Component {
         },
 
         component: (props) => {
-          return <tag className='tag'>{props.children}</tag>;
-
-          return <span className='tag'>{props.decoratedText}</span>;
+          return <span className='tag'>{props.children}</span>
         }
       },
     ];
