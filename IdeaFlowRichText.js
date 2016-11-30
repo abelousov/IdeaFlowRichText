@@ -1,5 +1,5 @@
 import React from 'react';
-import {EditorState, ContentState, CompositeDecorator} from 'draft-js';
+import {EditorState, ContentState} from 'draft-js';
 import Editor from 'draft-js-plugins-editor';
 import {List} from 'immutable';
 import findWithRegex from 'find-with-regex'
@@ -29,34 +29,9 @@ export default class IdeaFlowRichText extends React.Component {
   constructor (props) {
     super(props);
 
-    this._decorator = new CompositeDecorator([
-      {
-        strategy: (contentBlock, callback) => {
-          findWithRegex(MENTION_REGEX, contentBlock, callback);
-        },
-
-        component: (props) => {
-          console.log('>>>> rendering mention span: ', props);
-          return <span className='mention'>{props.decoratedText}</span>;
-        }
-      },
-
-      {
-        strategy: (contentBlock, callback) => {
-          findWithRegex(TAG_REGEX, contentBlock, callback);
-        },
-
-        component: (props) => {
-          console.log('>>>> rendering tag span: ', props);
-          return <span className='tag'>{props.decoratedText}</span>;
-        }
-      },
-    ]);
-
     const contentState = ContentState.createFromText(this.props.initialContents);
     this.state = {
-      editorState: EditorState.createWithContent(contentState, this._decorator),
-      // editorState: EditorState.createWithContent(contentState),
+      editorState: EditorState.createWithContent(contentState),
       tagSuggestions: List(),
       mentionSuggestions: List(),
     };
@@ -82,6 +57,31 @@ export default class IdeaFlowRichText extends React.Component {
   focus = () => this.refs.editor.focus();
 
   render () {
+    const decorators = [
+      {
+        strategy: (contentBlock, callback) => {
+          findWithRegex(MENTION_REGEX, contentBlock, callback);
+        },
+
+        component: (props) => {
+          return <mention className='mention'>{props.children}</mention>;
+          return <span className='mention'>{props.decoratedText}</span>
+        }
+      },
+
+      {
+        strategy: (contentBlock, callback) => {
+          findWithRegex(TAG_REGEX, contentBlock, callback);
+        },
+
+        component: (props) => {
+          return <tag className='tag'>{props.children}</tag>;
+
+          return <span className='tag'>{props.decoratedText}</span>;
+        }
+      },
+    ];
+
     const allTagSuggestions = this.props.tags.map((tagName) => suggestionFactory.createForTag({
       name: tagName,
       prefix: TAG_PREFIX
@@ -113,6 +113,9 @@ export default class IdeaFlowRichText extends React.Component {
             editorState={this.state.editorState}
             onChange={this.onEditorChange}
             plugins={plugins}
+            // draft-js-plugins-editor requires decorators to be passed this way, or they will be lost -
+            // https://github.com/draft-js-plugins/draft-js-plugins/blob/master/FAQ.md#how-can-i-use-custom-decorators-with-the-plugin-editor
+            decorators={decorators}
             spellCheck
             stripPastedStyles
             ref='editor'
