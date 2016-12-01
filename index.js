@@ -66,9 +66,11 @@ export default class IdeaFlowRichText extends React.Component {
   }
 
   render () {
-    const completionSet = completionSet.create(this._getCompletionDescriptors(), this.state.editorState);
+    const currentCompletionSet = completionSet.create(this._getCompletionDescriptors(), this.state.editorState);
 
     const focusEditor = () => this.refs.editor.focus();
+
+    console.log('>>>> plugins: ', currentCompletionSet.plugins);
 
     return (
       <div>
@@ -76,14 +78,14 @@ export default class IdeaFlowRichText extends React.Component {
           <Editor
             editorState={this.state.editorState}
             onChange={this.onEditorChange}
-            plugins={completionSet.plugins}
-            decorators={completionSet.decorators}
+            plugins={currentCompletionSet.plugins}
+            decorators={currentCompletionSet.decorators}
             spellCheck
             stripPastedStyles
             ref='editor'
           />
         </div>
-        {completionSet.renderedSuggestionComponent}
+        {currentCompletionSet.renderedSuggestionComponent}
       </div>
     );
   }

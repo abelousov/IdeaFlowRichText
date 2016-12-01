@@ -14,7 +14,11 @@ const createSuggestionPlugin = ({suggestionRegex}) => {
 
   //this looks like a strategy to check for start of autocompleted entities
   const completionSuggestionStrategy = (contentBlock, callback) => {
-    findWithRegex(suggestionRegex, contentBlock, callback);
+    // findWithRegex(suggestionRegex, contentBlock, callback);
+    findWithRegex(suggestionRegex, contentBlock, function (start, end) {
+      console.log('>>>> found suggestion occurence: ', start, end);
+      callback(start, end)
+    });
   };
 
   const completionPluginFactory = completionPluginCreator(

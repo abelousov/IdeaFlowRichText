@@ -1,27 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 
-export default function SuggestionComponentList (props) {
-  const descriptorsByPrefixes = props.descriptorsByPrefixes;
-  const prefixes = Object.keys(descriptorsByPrefixes);
-
-  return (
-    <div>
-      {
-        prefixes.map((currentPrefix) => {
-          const {SuggestionComponent, allSuggestions} = descriptorsByPrefixes[currentPrefix]
-
-          return <SuggestionComponentWrapper
-            key={currentPrefix}
-            allSuggestions={allSuggestions}
-            SuggestionComponent={SuggestionComponent}
-          />
-        })
-      }
-    </div>
-  )
-}
-
-class SuggestionComponentWrapper extends Component {
+export default class SuggestionComponentWrapper extends Component {
   constructor (props) {
     super(props)
 
@@ -37,18 +16,26 @@ class SuggestionComponentWrapper extends Component {
   }
 
   render () {
-    const {SuggestionComponent, allSuggestions} = this.props
+    const {SuggestionComponent, completionDescriptors, editorState} = this.props
 
     const currentSearch = this.state.currentSearch;
+
+    return <SuggestionComponent
+      onSearchChange={this.onSearchChange}
+      suggestions={this._getFilteredSuggestions(currentSearch, completionDescriptors, editorState)}
+    />
+  }
+
+  _getFilteredSuggestions (currentSearch, completionDescriptors, editorState) {
+    // TODO: define current suggestion type using editorState
+    const allSuggestions = completionDescriptors[0].suggestions;
 
     const currentSearchIsEmpty = !currentSearch || currentSearch === '';
     const currentFilteredSuggestions = currentSearchIsEmpty
       ? allSuggestions
       : allSuggestions.filter((suggestion) => suggestion.fitsSearch(currentSearch));
 
-    return <SuggestionComponent
-      onSearchChange={this.onSearchChange}
-      suggestions={currentFilteredSuggestions}
-    />
+    console.log('>>>> filtered suggestions: ', currentSearch, allSuggestions, currentFilteredSuggestions);
+    return currentFilteredSuggestions;
   }
 }

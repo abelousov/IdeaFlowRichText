@@ -12,7 +12,12 @@ export default {
 
     const decorators = completionDescriptors.map((descriptor) => _createDecorator(descriptor.type))
 
-    const renderedSuggestionComponent = _renderSuggestionComponent(completionDescriptors, editorState)
+    const renderedSuggestionComponent = _renderSuggestionComponent(
+      completionDescriptors,
+      completionPlugin.CompletionSuggestions,
+      editorState
+    )
+
     return {
       decorators,
       plugins: [completionPlugin],
@@ -26,12 +31,13 @@ function _getSuggestionRegex(completionDescriptors) {
 
   const prefixesUnionGroup = `(${allPrefixes.join('|')})`
 
-  return new RegExp(`\\B${prefixesUnionGroup}.*`, 'g')
+  return new RegExp(`\\B${prefixesUnionGroup}(\\w|\\d|_|\\s)*`, 'g')
 }
 
-function _renderSuggestionComponent(completionDescriptors, editorState) {
+function _renderSuggestionComponent(completionDescriptors, SuggestionComponent, editorState) {
   return <SuggestionComponentWrapper
     completionDescriptors={completionDescriptors}
+    SuggestionComponent={SuggestionComponent}
     editorState={editorState}
   />
 }
