@@ -36,7 +36,6 @@ export default class IdeaFlowRichText extends React.Component {
       {
         prefix: MENTION_PREFIX,
         suggestions: this.props.mentions.map((mentionData) => suggestionFactory.createForMention({
-          nickname: mentionData.get('nickname'),
           fullName: mentionData.get('fullName'),
           avatarUrl: mentionData.get('avatarUrl')
         }))

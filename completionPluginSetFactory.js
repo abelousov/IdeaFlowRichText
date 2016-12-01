@@ -44,7 +44,7 @@ class CompletionPluginSet {
   }
 
   _getSuggestionRegexForPrefix (suggestionPrefix) {
-    return new RegExp(`(\\s|^)${suggestionPrefix}[^\\s]*`, 'g')
+    return new RegExp(`\\B${suggestionPrefix}.*`, 'g')
   }
 }
 

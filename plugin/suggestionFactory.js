@@ -1,19 +1,18 @@
 import React from 'react';
 
 export default {
-  createForTag ({name, prefix}) {
-    return new TagSuggestion(name, prefix)
+  createForTag ({name}) {
+    return new TagSuggestion(name)
   },
 
-  createForMention ({nickname, fullName, avatarUrl, prefix}) {
-    return new MentionSuggestion(nickname, fullName, avatarUrl, prefix)
+  createForMention ({fullName, avatarUrl}) {
+    return new MentionSuggestion(fullName, avatarUrl)
   }
 }
 
 class TagSuggestion {
-  constructor(name, prefix) {
+  constructor(name) {
     this.name = name;
-    this.prefix = prefix;
   }
 
   fitsSearch (searchValue) {
@@ -27,24 +26,18 @@ class TagSuggestion {
   }
 
   getTextForEditor () {
-    return this.getPrefix() + this.name
-  }
-
-  getPrefix () {
-    return this.prefix
+    return this.name
   }
 }
 
 class MentionSuggestion {
-  constructor(nickname, fullName, avatarUrl, prefix) {
-    this.nickname = nickname;
+  constructor(fullName, avatarUrl) {
     this.fullName = fullName;
     this.avatarUrl = avatarUrl;
-    this.prefix = prefix;
   }
 
   fitsSearch (searchValue) {
-    return this.nickname.startsWith(searchValue.toLowerCase());
+    return this.fullName.toLowerCase().startsWith(searchValue.toLowerCase());
   }
 
   renderOptionView () {
@@ -57,10 +50,6 @@ class MentionSuggestion {
   }
 
   getTextForEditor () {
-    return this.getPrefix() + this.nickname
-  }
-
-  getPrefix () {
-    return this.prefix
+    return this.fullName
   }
 }
