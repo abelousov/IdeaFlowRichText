@@ -6,11 +6,11 @@ import {Entity} from 'draft-js';
 
 export default {
   create (completionDescriptions) {
-    return new CompletionPluginSet(completionDescriptions)
+    return new CompletionSet(completionDescriptions)
   }
 }
 
-class CompletionPluginSet {
+class CompletionSet {
   constructor (completionDescriptors) {
     this._createCompletionPlugins(completionDescriptors);
   }

@@ -3,7 +3,7 @@ import {EditorState, ContentState, SelectionState} from 'draft-js';
 import Editor from 'draft-js-plugins-editor';
 import constants from './constants'
 
-import completionPluginSetFactory from './completionPluginSetFactory'
+import completionPluginSetFactory from './completionSet'
 
 import suggestionFactory from './suggestionFactory'
 
