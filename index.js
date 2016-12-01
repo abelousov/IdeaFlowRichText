@@ -21,7 +21,7 @@ export default class IdeaFlowRichText extends React.Component {
     const contentState = ContentState.createFromText(this.props.initialContents);
 
     this.state = {
-      editorState: this._formatCompletions(EditorState.createWithContent(contentState)),
+      editorState: EditorState.createWithContent(contentState),
     };
   }
 
@@ -55,11 +55,7 @@ export default class IdeaFlowRichText extends React.Component {
     }
 
     //we maintain state on our own, as it's more than just plain text contents
-    this.setState({editorState: this._formatCompletions(newEditorState)})
-  }
-
-  _formatCompletions(editorState) {
-    return this._completionPluginSet.formatCompletions(editorState)
+    this.setState({editorState: newEditorState})
   }
 
   _getPlainTextFromEditorState = (editorState) => {

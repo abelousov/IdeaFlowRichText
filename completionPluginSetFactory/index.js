@@ -39,10 +39,6 @@ class CompletionPluginSet {
     return this._pluginInstances
   }
 
-  formatCompletions (editorState) {
-    return editorState
-  }
-
   _getSuggestionRegexForPrefix (suggestionPrefix) {
     return new RegExp(`\\B${suggestionPrefix}.*`, 'g')
   }
