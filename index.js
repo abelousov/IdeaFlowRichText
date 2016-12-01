@@ -13,6 +13,13 @@ import './styles/Draft.scss';
 const TAG_PREFIX = '#';
 const MENTION_PREFIX = '@';
 
+import createIssueSuggestionPlugin, {defaultSuggestionsFilter} from './issue/plugin';
+const issueSuggestionPlugin = createIssueSuggestionPlugin();
+const {CompletionSuggestions} = issueSuggestionPlugin;
+const issuePlugins = [issueSuggestionPlugin];
+import {List, fromJS} from 'immutable';
+
+
 export default class IdeaFlowRichText extends React.Component {
   constructor (props) {
     super(props);
@@ -20,8 +27,13 @@ export default class IdeaFlowRichText extends React.Component {
     const contentState = ContentState.createFromText(this.props.initialContents);
     const editorState = EditorState.createWithContent(contentState);
 
+    // this.state = {
+    //   editorState
+    // };
+
     this.state = {
-      editorState
+      editorState,
+      suggestions: List()
     };
   }
 
@@ -44,6 +56,28 @@ export default class IdeaFlowRichText extends React.Component {
       }
     ]
   }
+
+  onIssueSearchChange = ({value}) => {
+    const suggestions = fromJS([
+      {
+        id: 1,
+        subject: 'New Cool Feature',
+      },
+      {
+        id: 2,
+        subject: 'Bug',
+      },
+      {
+        id: 3,
+        subject: 'Improve Documentation',
+      },
+    ]);
+
+    this.setState({
+      suggestions: defaultSuggestionsFilter(value, suggestions),
+    });
+  };
+
 
   onEditorChange = (newEditorState) => {
     const currentContents = this._getPlainTextFromEditorState(this.state.editorState)
@@ -73,19 +107,36 @@ export default class IdeaFlowRichText extends React.Component {
     console.log('>>>> plugins: ', currentCompletionSet.plugins);
 
     return (
+      // <div>
+      //   <div className='editor' onClick={focusEditor}>
+      //     <Editor
+      //       editorState={this.state.editorState}
+      //       onChange={this.onEditorChange}
+      //       plugins={currentCompletionSet.plugins}
+      //       decorators={currentCompletionSet.decorators}
+      //       spellCheck
+      //       stripPastedStyles
+      //       ref='editor'
+      //     />
+      //   </div>
+      //   {currentCompletionSet.renderedSuggestionComponent}
+      // </div>
       <div>
         <div className='editor' onClick={focusEditor}>
           <Editor
             editorState={this.state.editorState}
             onChange={this.onEditorChange}
-            plugins={currentCompletionSet.plugins}
-            decorators={currentCompletionSet.decorators}
+            plugins={issuePlugins}
             spellCheck
             stripPastedStyles
+            placeholder='Enter some text, with a # to see the issue autocompletion'
             ref='editor'
           />
         </div>
-        {currentCompletionSet.renderedSuggestionComponent}
+        <CompletionSuggestions
+          onSearchChange={this.onIssueSearchChange}
+          suggestions={this.state.suggestions}
+        />
       </div>
     );
   }
