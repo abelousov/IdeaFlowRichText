@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 import {fromJS} from 'immutable';
 
-import IdeaFlowRichText from '../IdeaFlowRichText'
+import IdeaFlowRichText from '../index'
 
 const AppRoot = () => {
   const initialRichTextContents = "Hello user! try typing '@' and '#' to use auto-completion. \nThat's what you can get: \ntag - #idea \nmention - @jacob"

@@ -25,15 +25,11 @@ const createIssueSuggestionPlugin = ({suggestionPrefix}) => {
     themeKey
   )
 
-  const pluginInstance = completionPluginFactory({
+  return completionPluginFactory({
     theme: {
       [themeKey]: themeKey
     }
   })
-
-  return {
-    pluginInstance
-  }
 };
 
 export default createIssueSuggestionPlugin
