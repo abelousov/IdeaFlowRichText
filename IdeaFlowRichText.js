@@ -1,5 +1,5 @@
 import React from 'react';
-import {EditorState, ContentState} from 'draft-js';
+import {EditorState, ContentState, SelectionState} from 'draft-js';
 import Editor from 'draft-js-plugins-editor';
 import {List} from 'immutable';
 import findWithRegex from 'find-with-regex'
@@ -23,7 +23,7 @@ const TagSuggestionsComponent = tagSuggestionPlugin.CompletionSuggestions;
 const mentionSuggestionPlugin = createSuggestionPlugin({suggestionPrefix: MENTION_PREFIX});
 const MentionSuggestionsComponent = mentionSuggestionPlugin.CompletionSuggestions;
 
-const plugins = [tagSuggestionPlugin, mentionSuggestionPlugin];
+const plugins = [tagSuggestionPlugin.pluginInstance, mentionSuggestionPlugin.pluginInstance];
 
 export default class IdeaFlowRichText extends React.Component {
   constructor (props) {
