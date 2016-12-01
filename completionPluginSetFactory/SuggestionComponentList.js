@@ -25,7 +25,6 @@ export default class SuggestionComponentList extends Component {
     const filteredSuggestionsStateKey = this._getFilteredSuggestionsStateKey(prefix)
 
     const onSearchChange = ({value}) => {
-      console.log('>>>> value: ', value);
       this.setState({
         [filteredSuggestionsStateKey]: allSuggestions.filter((suggestion) => suggestion.fitsSearch(value)),
       });

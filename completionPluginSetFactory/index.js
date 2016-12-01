@@ -26,7 +26,6 @@ class CompletionPluginSet {
       const pluginInstance = createSuggestionPlugin({suggestionRegex: this._getSuggestionRegexForPrefix(suggestionPrefix)});
       this._pluginInstances.push(pluginInstance)
 
-      console.log('>>>> creating decorator for: ', description.type);
       this._decorators.push(this._createDecorator(description.type))
 
       this._completionDescriptorsByPrefixes[suggestionPrefix] = {

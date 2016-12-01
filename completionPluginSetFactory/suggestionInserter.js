@@ -32,8 +32,6 @@ export default (editorState, suggestion) => {
     completionType: suggestion.getType()
   })
 
-  console.log('>>>> created entity: ', suggestion, suggestion.getType());
-
   let entityAddedContent = Modifier.applyEntity(
     suggestionReplacedContent,
     newTextSelection,

@@ -56,23 +56,21 @@
 
 	var _immutable = __webpack_require__(178);
 
-	var _IdeaFlowRichText = __webpack_require__(179);
+	var _index = __webpack_require__(179);
 
-	var _IdeaFlowRichText2 = _interopRequireDefault(_IdeaFlowRichText);
+	var _index2 = _interopRequireDefault(_index);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var AppRoot = function AppRoot() {
-	  var initialRichTextContents = "Hello user! try typing '@' and '#' to use auto-completion. \nThat's what you can get: \ntag - #idea \nmention - @jacob";
+	  var initialRichTextContents = "";
 
 	  var tags = (0, _immutable.fromJS)(['idea', 'ideal', 'deal']);
 
 	  var mentions = (0, _immutable.fromJS)([{
-	    nickname: 'jacob',
 	    fullName: 'Jacob Cole',
 	    avatarUrl: 'https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-1/p64x64/15203382_10157793560775023_2549521399764329245_n.jpg?oh=f81fe5623267e7c5380a54d131cb4268&oe=58F7B8AF'
 	  }, {
-	    nickname: 'anton',
 	    fullName: 'Anton Belousov',
 	    avatarUrl: 'https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-1/p64x64/1236863_10202961295489376_3520782659964337326_n.jpg?oh=5d6bba02be22c70386cef65b22960daa&oe=58C6DDE4'
 	  }]);
@@ -89,7 +87,7 @@
 	      null,
 	      'IdeaFlowRichText demo'
 	    ),
-	    _react2.default.createElement(_IdeaFlowRichText2.default, {
+	    _react2.default.createElement(_index2.default, {
 	      initialContents: initialRichTextContents,
 	      tags: tags,
 	      mentions: mentions,
@@ -26513,23 +26511,21 @@
 
 	var _draftJsPluginsEditor2 = _interopRequireDefault(_draftJsPluginsEditor);
 
-	var _immutable = __webpack_require__(178);
+	var _constants = __webpack_require__(316);
 
-	var _findWithRegex = __webpack_require__(316);
+	var _constants2 = _interopRequireDefault(_constants);
 
-	var _findWithRegex2 = _interopRequireDefault(_findWithRegex);
+	var _completionPluginSetFactory = __webpack_require__(317);
 
-	var _plugin = __webpack_require__(317);
+	var _completionPluginSetFactory2 = _interopRequireDefault(_completionPluginSetFactory);
 
-	var _plugin2 = _interopRequireDefault(_plugin);
-
-	var _suggestionFactory = __webpack_require__(336);
+	var _suggestionFactory = __webpack_require__(339);
 
 	var _suggestionFactory2 = _interopRequireDefault(_suggestionFactory);
 
-	__webpack_require__(337);
+	__webpack_require__(340);
 
-	__webpack_require__(339);
+	__webpack_require__(342);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26542,18 +26538,6 @@
 	var TAG_PREFIX = '#';
 	var MENTION_PREFIX = '@';
 
-	//TODO: remove duplication in plugin definitions
-	var MENTION_REGEX = new RegExp(MENTION_PREFIX + '(\\w|\\d|_|-|\\.)+', 'g');
-	var TAG_REGEX = new RegExp(TAG_PREFIX + '(\\w|\\d|_|-|\\.)+', 'g');
-
-	var tagSuggestionPlugin = (0, _plugin2.default)({ suggestionPrefix: TAG_PREFIX });
-	var TagSuggestionsComponent = tagSuggestionPlugin.CompletionSuggestions;
-
-	var mentionSuggestionPlugin = (0, _plugin2.default)({ suggestionPrefix: MENTION_PREFIX });
-	var MentionSuggestionsComponent = mentionSuggestionPlugin.CompletionSuggestions;
-
-	var plugins = [tagSuggestionPlugin, mentionSuggestionPlugin];
-
 	var IdeaFlowRichText = function (_React$Component) {
 	  _inherits(IdeaFlowRichText, _React$Component);
 
@@ -26563,8 +26547,8 @@
 	    var _this = _possibleConstructorReturn(this, (IdeaFlowRichText.__proto__ || Object.getPrototypeOf(IdeaFlowRichText)).call(this, props));
 
 	    _this.onEditorChange = function (newEditorState) {
-	      var currentContents = _this.getPlainTextFromEditorState(_this.state.editorState);
-	      var newContents = _this.getPlainTextFromEditorState(newEditorState);
+	      var currentContents = _this._getPlainTextFromEditorState(_this.state.editorState);
+	      var newContents = _this._getPlainTextFromEditorState(newEditorState);
 
 	      var needNotifyParent = currentContents != newContents;
 
@@ -26577,80 +26561,50 @@
 	      _this.setState({ editorState: newEditorState });
 	    };
 
-	    _this.getPlainTextFromEditorState = function (editorState) {
+	    _this._getPlainTextFromEditorState = function (editorState) {
+	      //TODO: clean completion entities
 	      return editorState.getCurrentContent().getPlainText();
 	    };
 
-	    _this.focus = function () {
-	      return _this.refs.editor.focus();
-	    };
+	    _this._completionPluginSet = _completionPluginSetFactory2.default.create(_this._getCompletionDescriptors());
 
 	    var contentState = _draftJs.ContentState.createFromText(_this.props.initialContents);
+
 	    _this.state = {
-	      editorState: _draftJs.EditorState.createWithContent(contentState),
-	      tagSuggestions: (0, _immutable.List)(),
-	      mentionSuggestions: (0, _immutable.List)()
+	      editorState: _draftJs.EditorState.createWithContent(contentState)
 	    };
 	    return _this;
 	  }
 
 	  _createClass(IdeaFlowRichText, [{
+	    key: '_getCompletionDescriptors',
+	    value: function _getCompletionDescriptors() {
+	      return [{
+	        prefix: TAG_PREFIX,
+	        suggestions: this.props.tags.map(function (tagName) {
+	          return _suggestionFactory2.default.createForTag({
+	            name: tagName
+	          });
+	        }),
+	        type: _constants2.default.TAG
+	      }, {
+	        prefix: MENTION_PREFIX,
+	        suggestions: this.props.mentions.map(function (mentionData) {
+	          return _suggestionFactory2.default.createForMention({
+	            fullName: mentionData.get('fullName'),
+	            avatarUrl: mentionData.get('avatarUrl')
+	          });
+	        }),
+	        type: _constants2.default.MENTION
+	      }];
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      var _this2 = this;
 
-	      var createAutocompleteDecorator = function createAutocompleteDecorator(regex, autocompleteType) {
-	        return {
-	          strategy: function strategy(contentBlock, callback) {
-	            (0, _findWithRegex2.default)(regex, contentBlock, callback);
-	          },
-
-	          component: function component(props) {
-	            return _react2.default.createElement(
-	              'span',
-	              { className: autocompleteType },
-	              props.children
-	            );
-	          }
-	        };
-	      };
-
-	      var decorators = [createAutocompleteDecorator(MENTION_REGEX, 'mention'), createAutocompleteDecorator(TAG_REGEX, 'tag')];
-
-	      var allTagSuggestions = this.props.tags.map(function (tagName) {
-	        return _suggestionFactory2.default.createForTag({
-	          name: tagName,
-	          prefix: TAG_PREFIX
-	        });
-	      });
-
-	      var onTagSearchChange = function onTagSearchChange(_ref) {
-	        var value = _ref.value;
-
-	        _this2.setState({
-	          tagSuggestions: allTagSuggestions.filter(function (tagSuggestion) {
-	            return tagSuggestion.fitsSearch(value);
-	          })
-	        });
-	      };
-
-	      var allMentionSuggestions = this.props.mentions.map(function (mention) {
-	        return _suggestionFactory2.default.createForMention({
-	          nickname: mention.get('nickname'),
-	          fullName: mention.get('fullName'),
-	          avatarUrl: mention.get('avatarUrl'),
-	          prefix: MENTION_PREFIX
-	        });
-	      });
-
-	      var onMentionSearchChange = function onMentionSearchChange(_ref2) {
-	        var value = _ref2.value;
-
-	        _this2.setState({
-	          mentionSuggestions: allMentionSuggestions.filter(function (mentionSuggestion) {
-	            return mentionSuggestion.fitsSearch(value);
-	          })
-	        });
+	      var focusEditor = function focusEditor() {
+	        return _this2.refs.editor.focus();
 	      };
 
 	      return _react2.default.createElement(
@@ -26658,27 +26612,18 @@
 	        null,
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'editor', onClick: this.focus },
+	          { className: 'editor', onClick: focusEditor },
 	          _react2.default.createElement(_draftJsPluginsEditor2.default, {
 	            editorState: this.state.editorState,
 	            onChange: this.onEditorChange,
-	            plugins: plugins
-	            // draft-js-plugins-editor requires decorators to be passed this way, or they will be lost -
-	            // https://github.com/draft-js-plugins/draft-js-plugins/blob/master/FAQ.md#how-can-i-use-custom-decorators-with-the-plugin-editor
-	            , decorators: decorators,
+	            plugins: this._completionPluginSet.getEditorPluginInsances(),
+	            decorators: this._completionPluginSet.getDecorators(),
 	            spellCheck: true,
 	            stripPastedStyles: true,
 	            ref: 'editor'
 	          })
 	        ),
-	        _react2.default.createElement(TagSuggestionsComponent, {
-	          onSearchChange: onTagSearchChange,
-	          suggestions: this.state.tagSuggestions
-	        }),
-	        _react2.default.createElement(MentionSuggestionsComponent, {
-	          onSearchChange: onMentionSearchChange,
-	          suggestions: this.state.mentionSuggestions
-	        })
+	        this._completionPluginSet.renderSuggestionComponents()
 	      );
 	    }
 	  }]);
@@ -44856,25 +44801,16 @@
 /* 316 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	var findWithRegex = function findWithRegex(regex, contentBlock, callback) {
-	  // Get the text from the contentBlock
-	  var text = contentBlock.getText();
-	  var matchArr = void 0;
-	  var start = void 0; // eslint-disable-line
-	  // Go through all matches in the text and return the indizes to the callback
-	  while ((matchArr = regex.exec(text)) !== null) {
-	    // eslint-disable-line
-	    start = matchArr.index;
-	    callback(start, start + matchArr[0].length);
-	  }
+	exports.default = {
+	  TAG: 'TAG',
+	  MENTION: 'MENTION',
+	  ENTITY_TYPE: 'COMPLETION'
 	};
-
-	exports.default = findWithRegex;
 
 /***/ },
 /* 317 */
@@ -44886,51 +44822,119 @@
 	  value: true
 	});
 
-	var _draftJsAutocompletePluginCreator = __webpack_require__(318);
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _draftJsAutocompletePluginCreator2 = _interopRequireDefault(_draftJsAutocompletePluginCreator);
+	var _createSuggestionPlugin = __webpack_require__(318);
 
-	var _suggestionInserter = __webpack_require__(326);
+	var _createSuggestionPlugin2 = _interopRequireDefault(_createSuggestionPlugin);
 
-	var _suggestionInserter2 = _interopRequireDefault(_suggestionInserter);
+	var _react = __webpack_require__(1);
 
-	var _SuggestionEntryComponent = __webpack_require__(329);
+	var _react2 = _interopRequireDefault(_react);
 
-	var _SuggestionEntryComponent2 = _interopRequireDefault(_SuggestionEntryComponent);
+	var _SuggestionComponentList = __webpack_require__(338);
 
-	var _findWithRegex = __webpack_require__(316);
+	var _SuggestionComponentList2 = _interopRequireDefault(_SuggestionComponentList);
 
-	var _findWithRegex2 = _interopRequireDefault(_findWithRegex);
+	var _constants = __webpack_require__(316);
 
-	__webpack_require__(330);
+	var _constants2 = _interopRequireDefault(_constants);
 
-	__webpack_require__(334);
+	var _draftJs = __webpack_require__(180);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	var themeKey = 'suggestions';
-
-	var createIssueSuggestionPlugin = function createIssueSuggestionPlugin(_ref) {
-	  var suggestionPrefix = _ref.suggestionPrefix;
-
-
-	  var SUGGESTION_PREFIX_REGEX = new RegExp('(\\s|^)' + suggestionPrefix + '[^\\s]*', 'g');
-
-	  //this looks like a strategy to check for start of autocompleted entities
-	  var completionSuggestionStrategy = function completionSuggestionStrategy(contentBlock, callback) {
-	    (0, _findWithRegex2.default)(SUGGESTION_PREFIX_REGEX, contentBlock, callback);
-	  };
-
-	  var completionPluginFactory = (0, _draftJsAutocompletePluginCreator2.default)(completionSuggestionStrategy, _suggestionInserter2.default, _SuggestionEntryComponent2.default, themeKey);
-
-	  return completionPluginFactory({
-	    theme: _defineProperty({}, themeKey, themeKey)
-	  });
+	exports.default = {
+	  create: function create(completionDescriptions) {
+	    return new CompletionPluginSet(completionDescriptions);
+	  }
 	};
 
-	exports.default = createIssueSuggestionPlugin;
+	var CompletionPluginSet = function () {
+	  function CompletionPluginSet(completionDescriptors) {
+	    _classCallCheck(this, CompletionPluginSet);
+
+	    this._createCompletionPlugins(completionDescriptors);
+	  }
+
+	  _createClass(CompletionPluginSet, [{
+	    key: '_createCompletionPlugins',
+	    value: function _createCompletionPlugins(completionDescriptors) {
+	      var _this = this;
+
+	      this._completionDescriptorsByPrefixes = {};
+	      this._pluginInstances = [];
+	      this._decorators = [];
+
+	      completionDescriptors.map(function (description) {
+	        var suggestionPrefix = description.prefix;
+
+	        var pluginInstance = (0, _createSuggestionPlugin2.default)({ suggestionRegex: _this._getSuggestionRegexForPrefix(suggestionPrefix) });
+	        _this._pluginInstances.push(pluginInstance);
+
+	        console.log('>>>> creating decorator for: ', description.type);
+	        _this._decorators.push(_this._createDecorator(description.type));
+
+	        _this._completionDescriptorsByPrefixes[suggestionPrefix] = {
+	          SuggestionComponent: pluginInstance.CompletionSuggestions,
+	          allSuggestions: description.suggestions
+	        };
+	      });
+	    }
+	  }, {
+	    key: 'renderSuggestionComponents',
+	    value: function renderSuggestionComponents() {
+	      return _react2.default.createElement(_SuggestionComponentList2.default, {
+	        descriptorsByPrefixes: this._completionDescriptorsByPrefixes
+	      });
+	    }
+	  }, {
+	    key: 'getEditorPluginInsances',
+	    value: function getEditorPluginInsances() {
+	      return this._pluginInstances;
+	    }
+	  }, {
+	    key: 'getDecorators',
+	    value: function getDecorators() {
+	      return this._decorators;
+	    }
+	  }, {
+	    key: '_getSuggestionRegexForPrefix',
+	    value: function _getSuggestionRegexForPrefix(suggestionPrefix) {
+	      return new RegExp('\\B' + suggestionPrefix + '.*', 'g');
+	    }
+	  }, {
+	    key: '_createDecorator',
+	    value: function _createDecorator(completionType) {
+	      return {
+	        strategy: function strategy(contentBlock, callback) {
+	          contentBlock.findEntityRanges(function (character) {
+	            var entityKey = character.getEntity();
+	            if (entityKey === null) {
+	              return false;
+	            }
+	            var entity = _draftJs.Entity.get(entityKey);
+
+	            var entityData = entity.getData();
+	            return entity.getType() === _constants2.default.ENTITY_TYPE && entityData.completionType === completionType;
+	          }, callback);
+	        },
+
+	        component: function component(props) {
+	          return _react2.default.createElement(
+	            'span',
+	            { className: completionType.toLowerCase() },
+	            props.children
+	          );
+	        }
+	      };
+	    }
+	  }]);
+
+	  return CompletionPluginSet;
+	}();
 
 /***/ },
 /* 318 */
@@ -44941,13 +44945,67 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+
+	var _draftJsAutocompletePluginCreator = __webpack_require__(319);
+
+	var _draftJsAutocompletePluginCreator2 = _interopRequireDefault(_draftJsAutocompletePluginCreator);
+
+	var _suggestionInserter = __webpack_require__(327);
+
+	var _suggestionInserter2 = _interopRequireDefault(_suggestionInserter);
+
+	var _SuggestionEntryComponent = __webpack_require__(330);
+
+	var _SuggestionEntryComponent2 = _interopRequireDefault(_SuggestionEntryComponent);
+
+	var _findWithRegex = __webpack_require__(335);
+
+	var _findWithRegex2 = _interopRequireDefault(_findWithRegex);
+
+	__webpack_require__(331);
+
+	__webpack_require__(336);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	var themeKey = 'suggestions';
+
+	var createSuggestionPlugin = function createSuggestionPlugin(_ref) {
+	  var suggestionRegex = _ref.suggestionRegex;
+
+
+	  //this looks like a strategy to check for start of autocompleted entities
+	  var completionSuggestionStrategy = function completionSuggestionStrategy(contentBlock, callback) {
+	    (0, _findWithRegex2.default)(suggestionRegex, contentBlock, callback);
+	  };
+
+	  var completionPluginFactory = (0, _draftJsAutocompletePluginCreator2.default)(completionSuggestionStrategy, _suggestionInserter2.default, _SuggestionEntryComponent2.default, themeKey);
+
+	  return completionPluginFactory({
+	    theme: _defineProperty({}, themeKey, themeKey)
+	  });
+	};
+
+	exports.default = createSuggestionPlugin;
+
+/***/ },
+/* 319 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
 	exports.defaultSuggestionsFilter = undefined;
 
-	var _CompletionSuggestions = __webpack_require__(319);
+	var _CompletionSuggestions = __webpack_require__(320);
 
 	var _CompletionSuggestions2 = _interopRequireDefault(_CompletionSuggestions);
 
-	var _CompletionSuggestionsPortal = __webpack_require__(323);
+	var _CompletionSuggestionsPortal = __webpack_require__(324);
 
 	var _CompletionSuggestionsPortal2 = _interopRequireDefault(_CompletionSuggestionsPortal);
 
@@ -44957,11 +45015,11 @@
 
 	var _immutable = __webpack_require__(178);
 
-	var _defaultSuggestionsFilter = __webpack_require__(324);
+	var _defaultSuggestionsFilter = __webpack_require__(325);
 
 	var _defaultSuggestionsFilter2 = _interopRequireDefault(_defaultSuggestionsFilter);
 
-	var _positionSuggestions = __webpack_require__(325);
+	var _positionSuggestions = __webpack_require__(326);
 
 	var _positionSuggestions2 = _interopRequireDefault(_positionSuggestions);
 
@@ -45097,7 +45155,7 @@
 	var defaultSuggestionsFilter = exports.defaultSuggestionsFilter = _defaultSuggestionsFilter2.default;
 
 /***/ },
-/* 319 */
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45402,13 +45460,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _decodeOffsetKey = __webpack_require__(320);
+	var _decodeOffsetKey = __webpack_require__(321);
 
 	var _decodeOffsetKey2 = _interopRequireDefault(_decodeOffsetKey);
 
 	var _draftJs = __webpack_require__(180);
 
-	var _getSearchText2 = __webpack_require__(321);
+	var _getSearchText2 = __webpack_require__(322);
 
 	var _getSearchText3 = _interopRequireDefault(_getSearchText2);
 
@@ -45421,7 +45479,7 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 /***/ },
-/* 320 */
+/* 321 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -45451,7 +45509,7 @@
 	exports.default = decodeOffsetKey;
 
 /***/ },
-/* 321 */
+/* 322 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45460,7 +45518,7 @@
 	  value: true
 	});
 
-	var _getWordAt = __webpack_require__(322);
+	var _getWordAt = __webpack_require__(323);
 
 	var _getWordAt2 = _interopRequireDefault(_getWordAt);
 
@@ -45478,7 +45536,7 @@
 	exports.default = getSearchText;
 
 /***/ },
-/* 322 */
+/* 323 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -45515,7 +45573,7 @@
 	exports.default = getWordAt;
 
 /***/ },
-/* 323 */
+/* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -45592,7 +45650,7 @@
 	exports.default = CompletionSuggestionsPortal;
 
 /***/ },
-/* 324 */
+/* 325 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -45613,7 +45671,7 @@
 	exports.default = defaultSuggestionsFilter;
 
 /***/ },
-/* 325 */
+/* 326 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -45685,7 +45743,7 @@
 	exports.default = positionSuggestions;
 
 /***/ },
-/* 326 */
+/* 327 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45696,7 +45754,11 @@
 
 	var _draftJs = __webpack_require__(180);
 
-	var _getSearchText2 = __webpack_require__(327);
+	var _constants = __webpack_require__(316);
+
+	var _constants2 = _interopRequireDefault(_constants);
+
+	var _getSearchText2 = __webpack_require__(328);
 
 	var _getSearchText3 = _interopRequireDefault(_getSearchText2);
 
@@ -45717,22 +45779,47 @@
 	    focusOffset: end
 	  });
 
-	  var suggestionReplacedContent = _draftJs.Modifier.replaceText(editorState.getCurrentContent(), suggestionTextSelection, suggestion.getTextForEditor());
+	  var newContent = suggestion.getTextForEditor();
+
+	  var suggestionReplacedContent = _draftJs.Modifier.replaceText(editorState.getCurrentContent(), suggestionTextSelection, newContent);
 
 	  // If the suggestion is inserted at the end, a space is appended right after for
 	  // a smooth writing experience.
 	  var blockKey = suggestionTextSelection.getAnchorKey();
 	  var blockSize = editorState.getCurrentContent().getBlockForKey(blockKey).getLength();
-	  if (blockSize === end) {
-	    suggestionReplacedContent = _draftJs.Modifier.insertText(suggestionReplacedContent, suggestionReplacedContent.getSelectionAfter(), ' ');
+	  var needAddSpace = blockSize === end;
+
+	  var newTextSelection = suggestionTextSelection.merge({ focusOffset: begin + newContent.length });
+
+	  var key = _draftJs.Entity.create(_constants2.default.ENTITY_TYPE, 'IMMUTABLE', {
+	    completionType: suggestion.getType()
+	  });
+
+	  console.log('>>>> created entity: ', suggestion, suggestion.getType());
+
+	  var entityAddedContent = _draftJs.Modifier.applyEntity(suggestionReplacedContent, newTextSelection, key);
+
+	  var updatedEditorState = _draftJs.EditorState.push(editorState, entityAddedContent, 'insert-suggestion');
+
+	  var emptySelectionAfterUpdatedText = entityAddedContent.getSelectionAfter().merge({
+	    anchorOffset: entityAddedContent.getSelectionAfter().getFocusOffset()
+	  });
+
+	  updatedEditorState = _draftJs.EditorState.forceSelection(updatedEditorState, emptySelectionAfterUpdatedText);
+
+	  if (needAddSpace) {
+	    var updatedContent = updatedEditorState.getCurrentContent();
+
+	    var contentWithTrailingSpace = _draftJs.Modifier.insertText(updatedContent, emptySelectionAfterUpdatedText, ' ');
+
+	    updatedEditorState = _draftJs.EditorState.push(updatedEditorState, contentWithTrailingSpace, 'insert-suggestion');
 	  }
 
-	  var newEditorState = _draftJs.EditorState.push(editorState, suggestionReplacedContent, 'insert-suggestion');
-	  return _draftJs.EditorState.forceSelection(newEditorState, suggestionReplacedContent.getSelectionAfter());
+	  return updatedEditorState;
 	};
 
 /***/ },
-/* 327 */
+/* 328 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45741,7 +45828,7 @@
 	  value: true
 	});
 
-	var _getWordAt = __webpack_require__(328);
+	var _getWordAt = __webpack_require__(329);
 
 	var _getWordAt2 = _interopRequireDefault(_getWordAt);
 
@@ -45759,7 +45846,7 @@
 	exports.default = getSearchText;
 
 /***/ },
-/* 328 */
+/* 329 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -45796,7 +45883,7 @@
 	exports.default = getWordAt;
 
 /***/ },
-/* 329 */
+/* 330 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45811,7 +45898,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(330);
+	__webpack_require__(331);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45887,16 +45974,16 @@
 	exports.default = SuggestionEntryComponent;
 
 /***/ },
-/* 330 */
+/* 331 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(331);
+	var content = __webpack_require__(332);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(333)(content, {});
+	var update = __webpack_require__(334)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -45913,10 +46000,10 @@
 	}
 
 /***/ },
-/* 331 */
+/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(332)();
+	exports = module.exports = __webpack_require__(333)();
 	// imports
 
 
@@ -45927,7 +46014,7 @@
 
 
 /***/ },
-/* 332 */
+/* 333 */
 /***/ function(module, exports) {
 
 	/*
@@ -45983,7 +46070,7 @@
 
 
 /***/ },
-/* 333 */
+/* 334 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -46235,16 +46322,43 @@
 
 
 /***/ },
-/* 334 */
+/* 335 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var findWithRegex = function findWithRegex(regex, contentBlock, callback) {
+	  // Get the text from the contentBlock
+	  var text = contentBlock.getText();
+	  var matchArr = void 0;
+	  var start = void 0; // eslint-disable-line
+	  // Go through all matches in the text and return the indizes to the callback
+	  while ((matchArr = regex.exec(text)) !== null) {
+	    // eslint-disable-line
+	    start = matchArr.index;
+
+	    console.log('>>>> found match: ', start, matchArr[0], regex, text);
+	    callback(start, start + matchArr[0].length);
+	  }
+	};
+
+	exports.default = findWithRegex;
+
+
+/***/ },
+/* 336 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(335);
+	var content = __webpack_require__(337);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(333)(content, {});
+	var update = __webpack_require__(334)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -46261,10 +46375,10 @@
 	}
 
 /***/ },
-/* 335 */
+/* 337 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(332)();
+	exports = module.exports = __webpack_require__(333)();
 	// imports
 
 
@@ -46275,7 +46389,7 @@
 
 
 /***/ },
-/* 336 */
+/* 338 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46292,31 +46406,137 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SuggestionComponentList = function (_Component) {
+	  _inherits(SuggestionComponentList, _Component);
+
+	  function SuggestionComponentList(props) {
+	    _classCallCheck(this, SuggestionComponentList);
+
+	    var _this = _possibleConstructorReturn(this, (SuggestionComponentList.__proto__ || Object.getPrototypeOf(SuggestionComponentList)).call(this, props));
+
+	    _this.state = {};
+
+	    _this._iterateSuggestionComponents(function (prefix, descriptor) {
+	      return _this.state[_this._getFilteredSuggestionsStateKey(prefix)] = descriptor.allSuggestions;
+	    });
+	    return _this;
+	  }
+
+	  _createClass(SuggestionComponentList, [{
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+
+	      var suggestionComponents = this._iterateSuggestionComponents(function (prefix, descriptor) {
+	        return _this2._renderSingleComponent(prefix, descriptor);
+	      });
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        suggestionComponents
+	      );
+	    }
+	  }, {
+	    key: '_iterateSuggestionComponents',
+	    value: function _iterateSuggestionComponents(callback) {
+	      var descriptorsByPrefixes = this.props.descriptorsByPrefixes;
+	      return Object.keys(descriptorsByPrefixes).map(function (prefix) {
+	        return callback(prefix, descriptorsByPrefixes[prefix]);
+	      });
+	    }
+	  }, {
+	    key: '_renderSingleComponent',
+	    value: function _renderSingleComponent(prefix, descriptor) {
+	      var _this3 = this;
+
+	      var SuggestionComponent = descriptor.SuggestionComponent,
+	          allSuggestions = descriptor.allSuggestions;
+
+
+	      var filteredSuggestionsStateKey = this._getFilteredSuggestionsStateKey(prefix);
+
+	      var onSearchChange = function onSearchChange(_ref) {
+	        var value = _ref.value;
+
+	        console.log('>>>> value: ', value);
+	        _this3.setState(_defineProperty({}, filteredSuggestionsStateKey, allSuggestions.filter(function (suggestion) {
+	          return suggestion.fitsSearch(value);
+	        })));
+	      };
+
+	      return _react2.default.createElement(SuggestionComponent, {
+	        key: prefix,
+	        onSearchChange: onSearchChange,
+	        suggestions: this.state[filteredSuggestionsStateKey]
+	      });
+	    }
+	  }, {
+	    key: '_getFilteredSuggestionsStateKey',
+	    value: function _getFilteredSuggestionsStateKey(prefix) {
+	      return 'filtered_suggestions_' + prefix;
+	    }
+	  }]);
+
+	  return SuggestionComponentList;
+	}(_react.Component);
+	/**
+	 * Created by anton on 01/12/16.
+	 */
+
+
+	exports.default = SuggestionComponentList;
+
+/***/ },
+/* 339 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _constants = __webpack_require__(316);
+
+	var _constants2 = _interopRequireDefault(_constants);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	exports.default = {
 	  createForTag: function createForTag(_ref) {
-	    var name = _ref.name,
-	        prefix = _ref.prefix;
+	    var name = _ref.name;
 
-	    return new TagSuggestion(name, prefix);
+	    return new TagSuggestion(name);
 	  },
 	  createForMention: function createForMention(_ref2) {
-	    var nickname = _ref2.nickname,
-	        fullName = _ref2.fullName,
-	        avatarUrl = _ref2.avatarUrl,
-	        prefix = _ref2.prefix;
+	    var fullName = _ref2.fullName,
+	        avatarUrl = _ref2.avatarUrl;
 
-	    return new MentionSuggestion(nickname, fullName, avatarUrl, prefix);
+	    return new MentionSuggestion(fullName, avatarUrl);
 	  }
 	};
 
 	var TagSuggestion = function () {
-	  function TagSuggestion(name, prefix) {
+	  function TagSuggestion(name) {
 	    _classCallCheck(this, TagSuggestion);
 
 	    this.name = name;
-	    this.prefix = prefix;
 	  }
 
 	  _createClass(TagSuggestion, [{
@@ -46336,12 +46556,12 @@
 	  }, {
 	    key: 'getTextForEditor',
 	    value: function getTextForEditor() {
-	      return this.getPrefix() + this.name;
+	      return this.name;
 	    }
 	  }, {
-	    key: 'getPrefix',
-	    value: function getPrefix() {
-	      return this.prefix;
+	    key: 'getType',
+	    value: function getType() {
+	      return _constants2.default.TAG;
 	    }
 	  }]);
 
@@ -46349,19 +46569,17 @@
 	}();
 
 	var MentionSuggestion = function () {
-	  function MentionSuggestion(nickname, fullName, avatarUrl, prefix) {
+	  function MentionSuggestion(fullName, avatarUrl) {
 	    _classCallCheck(this, MentionSuggestion);
 
-	    this.nickname = nickname;
 	    this.fullName = fullName;
 	    this.avatarUrl = avatarUrl;
-	    this.prefix = prefix;
 	  }
 
 	  _createClass(MentionSuggestion, [{
 	    key: 'fitsSearch',
 	    value: function fitsSearch(searchValue) {
-	      return this.nickname.startsWith(searchValue.toLowerCase());
+	      return this.fullName.toLowerCase().startsWith(searchValue.toLowerCase());
 	    }
 	  }, {
 	    key: 'renderOptionView',
@@ -46376,12 +46594,12 @@
 	  }, {
 	    key: 'getTextForEditor',
 	    value: function getTextForEditor() {
-	      return this.getPrefix() + this.nickname;
+	      return this.fullName;
 	    }
 	  }, {
-	    key: 'getPrefix',
-	    value: function getPrefix() {
-	      return this.prefix;
+	    key: 'getType',
+	    value: function getType() {
+	      return _constants2.default.MENTION;
 	    }
 	  }]);
 
@@ -46389,16 +46607,16 @@
 	}();
 
 /***/ },
-/* 337 */
+/* 340 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(338);
+	var content = __webpack_require__(341);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(333)(content, {});
+	var update = __webpack_require__(334)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -46415,10 +46633,10 @@
 	}
 
 /***/ },
-/* 338 */
+/* 341 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(332)();
+	exports = module.exports = __webpack_require__(333)();
 	// imports
 
 
@@ -46429,16 +46647,16 @@
 
 
 /***/ },
-/* 339 */
+/* 342 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(340);
+	var content = __webpack_require__(343);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(333)(content, {});
+	var update = __webpack_require__(334)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -46455,10 +46673,10 @@
 	}
 
 /***/ },
-/* 340 */
+/* 343 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(332)();
+	exports = module.exports = __webpack_require__(333)();
 	// imports
 
 
