@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 import {fromJS} from 'immutable';
 
-import IdeaFlowRichText from '../index'
+import IdeaFlowRichText from '../src'
 
 const AppRoot = () => {
   const initialRichTextContents = ""
