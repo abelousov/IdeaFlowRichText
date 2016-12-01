@@ -1,6 +1,7 @@
 import React from 'react';
 import {EditorState, ContentState, SelectionState} from 'draft-js';
 import Editor from 'draft-js-plugins-editor';
+import constants from './constants'
 
 import completionPluginSetFactory from './completionPluginSetFactory'
 
@@ -31,14 +32,16 @@ export default class IdeaFlowRichText extends React.Component {
         prefix: TAG_PREFIX,
         suggestions: this.props.tags.map((tagName) => suggestionFactory.createForTag({
           name: tagName
-        }))
+        })),
+        type: constants.TAG
       },
       {
         prefix: MENTION_PREFIX,
         suggestions: this.props.mentions.map((mentionData) => suggestionFactory.createForMention({
           fullName: mentionData.get('fullName'),
           avatarUrl: mentionData.get('avatarUrl')
-        }))
+        })),
+        type: constants.MENTION
       }
     ]
   }
@@ -73,6 +76,7 @@ export default class IdeaFlowRichText extends React.Component {
             editorState={this.state.editorState}
             onChange={this.onEditorChange}
             plugins={this._completionPluginSet.getEditorPluginInsances()}
+            decorators={this._completionPluginSet.getDecorators()}
             spellCheck
             stripPastedStyles
             ref='editor'

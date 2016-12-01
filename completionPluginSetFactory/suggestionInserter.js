@@ -29,9 +29,10 @@ export default (editorState, suggestion) => {
   let newTextSelection = suggestionTextSelection.merge({focusOffset: begin + newContent.length})
 
   const key = Entity.create(constants.ENTITY_TYPE, 'IMMUTABLE', {
-    isAutocompletedEntity: true,
-    type: suggestion.getType()
+    completionType: suggestion.getType()
   })
+
+  console.log('>>>> created entity: ', suggestion, suggestion.getType());
 
   let entityAddedContent = Modifier.applyEntity(
     suggestionReplacedContent,
