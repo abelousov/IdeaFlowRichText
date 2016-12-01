@@ -104,8 +104,6 @@ export default class IdeaFlowRichText extends React.Component {
 
     const focusEditor = () => this.refs.editor.focus();
 
-    console.log('>>>> plugins: ', currentCompletionSet.plugins);
-
     return (
       // <div>
       //   <div className='editor' onClick={focusEditor}>
@@ -127,6 +125,7 @@ export default class IdeaFlowRichText extends React.Component {
             editorState={this.state.editorState}
             onChange={this.onEditorChange}
             plugins={issuePlugins}
+            decorators={currentCompletionSet.decorators}
             spellCheck
             stripPastedStyles
             placeholder='Enter some text, with a # to see the issue autocompletion'
