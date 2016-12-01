@@ -3,7 +3,7 @@ import {EditorState, ContentState, SelectionState} from 'draft-js';
 import Editor from 'draft-js-plugins-editor';
 import constants from './constants'
 
-import completionPluginSetFactory from './completionSet'
+import completionSet from './completionSet'
 
 import suggestionFactory from './suggestionFactory'
 
@@ -17,12 +17,11 @@ export default class IdeaFlowRichText extends React.Component {
   constructor (props) {
     super(props);
 
-    this._completionPluginSet = completionPluginSetFactory.create(this._getCompletionDescriptors());
-
     const contentState = ContentState.createFromText(this.props.initialContents);
+    const editorState = EditorState.createWithContent(contentState);
 
     this.state = {
-      editorState: EditorState.createWithContent(contentState),
+      editorState
     };
   }
 
@@ -67,6 +66,8 @@ export default class IdeaFlowRichText extends React.Component {
   }
 
   render () {
+    const completionSet = completionSet.create(this._getCompletionDescriptors(), this.state.editorState);
+
     const focusEditor = () => this.refs.editor.focus();
 
     return (
@@ -75,14 +76,14 @@ export default class IdeaFlowRichText extends React.Component {
           <Editor
             editorState={this.state.editorState}
             onChange={this.onEditorChange}
-            plugins={this._completionPluginSet.getEditorPluginInsances()}
-            decorators={this._completionPluginSet.getDecorators()}
+            plugins={completionSet.plugins}
+            decorators={completionSet.decorators}
             spellCheck
             stripPastedStyles
             ref='editor'
           />
         </div>
-        {this._completionPluginSet.renderSuggestionComponents()}
+        {completionSet.renderedSuggestionComponent}
       </div>
     );
   }

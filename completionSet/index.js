@@ -1,80 +1,61 @@
 import createSuggestionPlugin from './createSuggestionPlugin'
 import React, {Component, PropTypes} from 'react';
-import SuggestionComponentList from './SuggestionComponentList'
+import SuggestionComponentWrapper from './SuggestionComponentWrapper'
 import constants from '../constants'
 import {Entity} from 'draft-js';
 
 export default {
-  create (completionDescriptions) {
-    return new CompletionSet(completionDescriptions)
+  create (completionDescriptors, editorState) {
+    const completionPlugin = createSuggestionPlugin({
+      suggestionRegex: _getSuggestionRegex(completionDescriptors)
+    })
+
+    const decorators = completionDescriptors.map((descriptor) => _createDecorator(descriptor.type))
+
+    const renderedSuggestionComponent = _renderSuggestionComponent(completionDescriptors, editorState)
+    return {
+      decorators,
+      plugins: [completionPlugin],
+      renderedSuggestionComponent
+    }
   }
 }
 
-class CompletionSet {
-  constructor (completionDescriptors) {
-    this._createCompletionPlugins(completionDescriptors);
-  }
+function _getSuggestionRegex(completionDescriptors) {
+  const allPrefixes = completionDescriptors.map(descriptor => descriptor.prefix)
 
-  _createCompletionPlugins (completionDescriptors) {
-    this._completionDescriptorsByPrefixes = {}
-    this._pluginInstances = []
-    this._decorators = []
+  const prefixesUnionGroup = `(${allPrefixes.join('|')})`
 
-    completionDescriptors.map((description) => {
-      const suggestionPrefix = description.prefix;
+  return new RegExp(`\\B${prefixesUnionGroup}.*`, 'g')
+}
 
-      const pluginInstance = createSuggestionPlugin({suggestionRegex: this._getSuggestionRegexForPrefix(suggestionPrefix)});
-      this._pluginInstances.push(pluginInstance)
+function _renderSuggestionComponent(completionDescriptors, editorState) {
+  return <SuggestionComponentWrapper
+    completionDescriptors={completionDescriptors}
+    editorState={editorState}
+  />
+}
 
-      this._decorators.push(this._createDecorator(description.type))
+function _createDecorator (completionType) {
+  return {
+    strategy: (contentBlock, callback) => {
+      contentBlock.findEntityRanges(
+        (character) => {
+          const entityKey = character.getEntity();
+          if (entityKey === null) {
+            return false;
+          }
+          const entity = Entity.get(entityKey);
 
-      this._completionDescriptorsByPrefixes[suggestionPrefix] = {
-        SuggestionComponent: pluginInstance.CompletionSuggestions,
-        allSuggestions: description.suggestions,
-      }
-    })
-  }
+          const entityData = entity.getData();
+          return entity.getType() === constants.ENTITY_TYPE && entityData.completionType === completionType;
+        },
+        callback
+      );
+    },
 
-  renderSuggestionComponents () {
-    return <SuggestionComponentList
-      descriptorsByPrefixes={this._completionDescriptorsByPrefixes}
-    />
-  }
-
-  getEditorPluginInsances () {
-    return this._pluginInstances
-  }
-
-  getDecorators () {
-    return this._decorators
-  }
-
-  _getSuggestionRegexForPrefix (suggestionPrefix) {
-    return new RegExp(`\\B${suggestionPrefix}.*`, 'g')
-  }
-
-  _createDecorator (completionType) {
-    return {
-      strategy: (contentBlock, callback) => {
-        contentBlock.findEntityRanges(
-          (character) => {
-            const entityKey = character.getEntity();
-            if (entityKey === null) {
-              return false;
-            }
-            const entity = Entity.get(entityKey);
-
-            const entityData = entity.getData();
-            return entity.getType() === constants.ENTITY_TYPE && entityData.completionType === completionType;
-
-          },
-          callback
-        );
-      },
-
-      component: (props) => {
-        return <span className={completionType.toLowerCase()}>{props.children}</span>
-      }
+    component: (props) => {
+      return <span className={completionType.toLowerCase()}>{props.children}</span>
     }
   }
 }
