@@ -1,46 +1,54 @@
 import React, {Component, PropTypes} from 'react';
 
-export default class SuggestionComponentList extends Component {
+export default function SuggestionComponentList (props) {
+  const descriptorsByPrefixes = props.descriptorsByPrefixes;
+  const prefixes = Object.keys(descriptorsByPrefixes);
+
+  return (
+    <div>
+      {
+        prefixes.map((currentPrefix) => {
+          const {SuggestionComponent, allSuggestions} = descriptorsByPrefixes[currentPrefix]
+
+          return <SuggestionComponentWrapper
+            key={currentPrefix}
+            allSuggestions={allSuggestions}
+            SuggestionComponent={SuggestionComponent}
+          />
+        })
+      }
+    </div>
+  )
+}
+
+class SuggestionComponentWrapper extends Component {
   constructor (props) {
     super(props)
 
-    this.state = {}
+    this.state = {
+      currentSearch: null
+    }
+  }
 
-    this._iterateSuggestionComponents((prefix, descriptor) => this.state[this._getFilteredSuggestionsStateKey(prefix)] = descriptor.allSuggestions)
+  onSearchChange = ({value}) => {
+    this.setState({
+      currentSearch: value
+    });
   }
 
   render () {
-    const suggestionComponents = this._iterateSuggestionComponents((prefix, descriptor) => this._renderSingleComponent(prefix, descriptor))
-    return <div>{suggestionComponents}</div>
-  }
+    const {SuggestionComponent, allSuggestions} = this.props
 
-  _iterateSuggestionComponents (callback) {
-    const descriptorsByPrefixes = this.props.descriptorsByPrefixes;
-    return Object.keys(descriptorsByPrefixes).map((prefix) => callback(prefix, descriptorsByPrefixes[prefix]))
-  }
+    const currentSearch = this.state.currentSearch;
 
-  _renderSingleComponent (prefix, descriptor) {
-    const {SuggestionComponent, allSuggestions} = descriptor
-
-    const filteredSuggestionsStateKey = this._getFilteredSuggestionsStateKey(prefix)
-
-    const onSearchChange = ({value}) => {
-      this.setState({
-        [filteredSuggestionsStateKey]: allSuggestions.filter((suggestion) => suggestion.fitsSearch(value)),
-      });
-    }
+    const currentSearchIsEmpty = !currentSearch || currentSearch === '';
+    const currentFilteredSuggestions = currentSearchIsEmpty
+      ? allSuggestions
+      : allSuggestions.filter((suggestion) => suggestion.fitsSearch(currentSearch));
 
     return <SuggestionComponent
-      key={prefix}
-      onSearchChange={onSearchChange}
-      suggestions={this.state[filteredSuggestionsStateKey]}
+      onSearchChange={this.onSearchChange}
+      suggestions={currentFilteredSuggestions}
     />
   }
-
-  _getFilteredSuggestionsStateKey (prefix) {
-    return `filtered_suggestions_${prefix}`;
-  }
 }
-/**
- * Created by anton on 01/12/16.
- */
