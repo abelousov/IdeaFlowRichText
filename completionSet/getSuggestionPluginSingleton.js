@@ -9,12 +9,27 @@ import './suggestionsStyles.scss'
 
 const themeKey = 'suggestions'
 
-const createSuggestionPlugin = ({suggestionRegex}) => {
+// singleton is a workaround - somehow if several instances of the plugin are created,
+// it stops working - looks like it uses some global stat
+// TODO: post a bug to 'draft-js-autocomplete-plugin-creator' and add link here
+export default ({suggestionRegex}) => {
+  if(!pluginSingleton) {
+    pluginSingleton = createSuggestionPlugin()
+  }
+
+  regexSingleton = suggestionRegex
+
+  return pluginSingleton
+}
 
 
+let pluginSingleton
+let regexSingleton
+
+const createSuggestionPlugin = () => {
   //this looks like a strategy to check for start of autocompleted entities
   const completionSuggestionStrategy = (contentBlock, callback) => {
-    findWithRegex(suggestionRegex, contentBlock, callback);
+    findWithRegex(regexSingleton, contentBlock, callback);
   };
 
   const completionPluginFactory = completionPluginCreator(
@@ -29,6 +44,4 @@ const createSuggestionPlugin = ({suggestionRegex}) => {
       [themeKey]: themeKey
     }
   })
-};
-
-export default createSuggestionPlugin
+}
