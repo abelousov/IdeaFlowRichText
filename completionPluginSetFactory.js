@@ -53,18 +53,24 @@ class SuggestionComponentList extends Component {
     super(props)
 
     this.state = {}
+
+    this._iterateSuggestionComponents((prefix, descriptor) => this.state[this._getFilteredSuggestionsStateKey(prefix)] = descriptor.allSuggestions)
   }
 
   render () {
-    const suggestionComponents = Object.keys(this.props.descriptorsByPrefixes).map((prefix) => this._renderSingleComponent(prefix, this.props.descriptorsByPrefixes[prefix]))
-
+    const suggestionComponents = this._iterateSuggestionComponents((prefix, descriptor) => this._renderSingleComponent(prefix, descriptor))
     return <div>{suggestionComponents}</div>
+  }
+
+  _iterateSuggestionComponents (callback) {
+    const descriptorsByPrefixes = this.props.descriptorsByPrefixes;
+    return Object.keys(descriptorsByPrefixes).map((prefix) => callback(prefix, descriptorsByPrefixes[prefix]))
   }
 
   _renderSingleComponent (prefix, descriptor) {
     const {SuggestionComponent, allSuggestions} = descriptor
 
-    const filteredSuggestionsStateKey = `filtered_suggestions_${prefix}`
+    const filteredSuggestionsStateKey = this._getFilteredSuggestionsStateKey(prefix)
 
     const onSearchChange = ({value}) => {
       this.setState({
@@ -72,12 +78,14 @@ class SuggestionComponentList extends Component {
       });
     }
 
-    const currentFilteredSuggestions = this.state[filteredSuggestionsStateKey] || allSuggestions;
-
     return <SuggestionComponent
       key={prefix}
       onSearchChange={onSearchChange}
-      suggestions={currentFilteredSuggestions}
+      suggestions={this.state[filteredSuggestionsStateKey]}
     />
+  }
+
+  _getFilteredSuggestionsStateKey (prefix) {
+    return `filtered_suggestions_${prefix}`;
   }
 }
