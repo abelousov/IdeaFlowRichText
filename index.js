@@ -21,7 +21,7 @@ export default class IdeaFlowRichText extends React.Component {
     const contentState = ContentState.createFromText(this.props.initialContents);
 
     this.state = {
-      editorState: EditorState.createWithContent(contentState),
+      editorState: this._formatCompletions(EditorState.createWithContent(contentState)),
     };
   }
 
@@ -45,8 +45,8 @@ export default class IdeaFlowRichText extends React.Component {
   }
 
   onEditorChange = (newEditorState) => {
-    const currentContents = this.getPlainTextFromEditorState(this.state.editorState)
-    const newContents = this.getPlainTextFromEditorState(newEditorState)
+    const currentContents = this._getPlainTextFromEditorState(this.state.editorState)
+    const newContents = this._getPlainTextFromEditorState(newEditorState)
 
     let needNotifyParent = currentContents != newContents;
 
@@ -56,10 +56,14 @@ export default class IdeaFlowRichText extends React.Component {
     }
 
     //we maintain state on our own, as it's more than just plain text contents
-    this.setState({editorState: newEditorState})
+    this.setState({editorState: this._formatCompletions(newEditorState)})
   }
 
-  getPlainTextFromEditorState = (editorState) => {
+  _formatCompletions(editorState) {
+    return this._completionPluginSet.formatCompletions(editorState)
+  }
+
+  _getPlainTextFromEditorState = (editorState) => {
     //TODO: clean completion entities
     return editorState.getCurrentContent().getPlainText()
   }

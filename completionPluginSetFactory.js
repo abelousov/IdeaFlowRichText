@@ -17,12 +17,12 @@ class CompletionPluginSet {
     this._pluginInstances = []
 
     completionDescriptors.map((description) => {
-      const prefix = description.prefix;
+      const suggestionPrefix = description.prefix;
 
-      const pluginInstance = createSuggestionPlugin({suggestionPrefix: prefix});
+      const pluginInstance = createSuggestionPlugin({suggestionRegex: this._getSuggestionRegexForPrefix(suggestionPrefix)});
       this._pluginInstances.push(pluginInstance)
 
-      this._completionDescriptorsByPrefixes[prefix] = {
+      this._completionDescriptorsByPrefixes[suggestionPrefix] = {
         SuggestionComponent: pluginInstance.CompletionSuggestions,
         allSuggestions: description.suggestions
       }
@@ -37,6 +37,14 @@ class CompletionPluginSet {
 
   getEditorPluginInsances () {
     return this._pluginInstances
+  }
+
+  formatCompletions (editorState) {
+    return editorState
+  }
+
+  _getSuggestionRegexForPrefix (suggestionPrefix) {
+    return new RegExp(`(\\s|^)${suggestionPrefix}[^\\s]*`, 'g')
   }
 }
 

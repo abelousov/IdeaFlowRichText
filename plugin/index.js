@@ -9,13 +9,12 @@ import './suggestionsStyles.scss'
 
 const themeKey = 'suggestions'
 
-const createIssueSuggestionPlugin = ({suggestionPrefix}) => {
+const createSuggestionPlugin = ({suggestionRegex}) => {
 
-  const SUGGESTION_PREFIX_REGEX = new RegExp(`(\\s|^)${suggestionPrefix}[^\\s]*`, 'g')
 
   //this looks like a strategy to check for start of autocompleted entities
   const completionSuggestionStrategy = (contentBlock, callback) => {
-    findWithRegex(SUGGESTION_PREFIX_REGEX, contentBlock, callback);
+    findWithRegex(suggestionRegex, contentBlock, callback);
   };
 
   const completionPluginFactory = completionPluginCreator(
@@ -32,4 +31,4 @@ const createIssueSuggestionPlugin = ({suggestionPrefix}) => {
   })
 };
 
-export default createIssueSuggestionPlugin
+export default createSuggestionPlugin
