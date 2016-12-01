@@ -1,5 +1,6 @@
 import React from 'react';
 
+import completionTypes from './constants'
 export default {
   createForTag ({name}) {
     return new TagSuggestion(name)
@@ -28,6 +29,10 @@ class TagSuggestion {
   getTextForEditor () {
     return this.name
   }
+
+  getType () {
+    return completionTypes.TAG
+  }
 }
 
 class MentionSuggestion {
@@ -51,5 +56,9 @@ class MentionSuggestion {
 
   getTextForEditor () {
     return this.fullName
+  }
+
+  getType () {
+    return completionTypes.MENTION
   }
 }

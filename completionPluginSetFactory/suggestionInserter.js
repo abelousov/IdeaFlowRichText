@@ -1,5 +1,5 @@
-import { Modifier, EditorState } from 'draft-js';
-
+import {Modifier, EditorState, Entity} from 'draft-js';
+import constants from '../constants'
 import getSearchText from './utils/getSearchText';
 
 export default (editorState, suggestion) => {
@@ -12,28 +12,61 @@ export default (editorState, suggestion) => {
     focusOffset: end,
   });
 
-  let suggestionReplacedContent = Modifier.replaceText(
+  const newContent = suggestion.getTextForEditor();
+
+  const suggestionReplacedContent = Modifier.replaceText(
     editorState.getCurrentContent(),
     suggestionTextSelection,
-    suggestion.getTextForEditor()
+    newContent
   );
 
   // If the suggestion is inserted at the end, a space is appended right after for
   // a smooth writing experience.
-  const blockKey = suggestionTextSelection.getAnchorKey();
-  const blockSize = editorState.getCurrentContent().getBlockForKey(blockKey).getLength();
-  if (blockSize === end) {
-    suggestionReplacedContent = Modifier.insertText(
-      suggestionReplacedContent,
-      suggestionReplacedContent.getSelectionAfter(),
-      ' ',
+  const blockKey = suggestionTextSelection.getAnchorKey()
+  const blockSize = editorState.getCurrentContent().getBlockForKey(blockKey).getLength()
+  const needAddSpace = blockSize === end;
+
+  let newTextSelection = suggestionTextSelection.merge({focusOffset: begin + newContent.length})
+
+  const key = Entity.create(constants.ENTITY_TYPE, 'IMMUTABLE', {
+    isAutocompletedEntity: true,
+    type: suggestion.getType()
+  })
+
+  let entityAddedContent = Modifier.applyEntity(
+    suggestionReplacedContent,
+    newTextSelection,
+    key
+  )
+
+  let updatedEditorState = EditorState.push(
+    editorState,
+    entityAddedContent,
+    'insert-suggestion',
+  )
+
+  const emptySelectionAfterUpdatedText = entityAddedContent.getSelectionAfter().merge({
+    anchorOffset: entityAddedContent.getSelectionAfter().getFocusOffset()
+  })
+
+  updatedEditorState = EditorState.forceSelection(updatedEditorState, emptySelectionAfterUpdatedText);
+
+  if (needAddSpace) {
+    let updatedContent = updatedEditorState.getCurrentContent();
+
+    let contentWithTrailingSpace = Modifier.insertText(
+      updatedContent,
+      emptySelectionAfterUpdatedText,
+      ' '
     );
+
+    updatedEditorState = EditorState.push(
+      updatedEditorState,
+      contentWithTrailingSpace,
+      'insert-suggestion',
+    )
   }
 
-  const newEditorState = EditorState.push(
-    editorState,
-    suggestionReplacedContent,
-    'insert-suggestion',
-  );
-  return EditorState.forceSelection(newEditorState, suggestionReplacedContent.getSelectionAfter());
+  return updatedEditorState;
+
 };

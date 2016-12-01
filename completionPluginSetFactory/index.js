@@ -1,4 +1,4 @@
-import createSuggestionPlugin from './plugin/createSuggestionPlugin'
+import createSuggestionPlugin from './createSuggestionPlugin'
 import React, {Component, PropTypes} from 'react';
 import SuggestionComponentList from './SuggestionComponentList'
 export default {

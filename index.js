@@ -4,7 +4,7 @@ import Editor from 'draft-js-plugins-editor';
 
 import completionPluginSetFactory from './completionPluginSetFactory'
 
-import suggestionFactory from './plugin/suggestionFactory'
+import suggestionFactory from './suggestionFactory'
 
 import './styles/IdeaFlowRichText.scss';
 import './styles/Draft.scss';
