@@ -17,12 +17,12 @@ function findCurrentAutocomplete (editorState, possiblePrefixes) {
 
   const value = valuePartBeforeSelectionStart + valuePartAfterSelectionStart
 
-  const valueStart = autocompleteStart + prefix.length
+  const wholeAutocomplete = prefix + value
 
   return {
     prefix,
     searchValueWithoutPrefix: value,
-    selection: _getSelectionForString({editorState, startIndex: valueStart, str: value})
+    selection: _getSelectionForString({editorState, startIndex: autocompleteStart, str: wholeAutocomplete})
   }
 }
 
