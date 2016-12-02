@@ -683,7 +683,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -812,7 +812,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 	'use strict';
 
@@ -1256,7 +1256,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -1365,7 +1365,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	function makeEmptyFunction(arg) {
@@ -1406,7 +1406,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -1437,7 +1437,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -1642,7 +1642,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -1687,7 +1687,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -2767,7 +2767,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -3204,7 +3204,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -3635,7 +3635,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -4474,7 +4474,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 	'use strict';
 
@@ -5733,7 +5733,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -6224,7 +6224,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -6306,7 +6306,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -6369,7 +6369,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -6543,7 +6543,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -7644,7 +7644,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -7768,7 +7768,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -7967,7 +7967,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -8060,7 +8060,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -8159,7 +8159,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -8188,7 +8188,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -8554,7 +8554,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -8596,7 +8596,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -8699,7 +8699,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -9032,7 +9032,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -12466,7 +12466,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 * @typechecks static-only
 	 */
 
@@ -13659,7 +13659,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -14627,7 +14627,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -15919,7 +15919,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -16056,7 +16056,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -16087,7 +16087,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	/*eslint-disable no-self-compare */
@@ -16319,7 +16319,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -16344,7 +16344,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -16588,7 +16588,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -16612,7 +16612,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -16657,7 +16657,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -16833,7 +16833,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -18977,7 +18977,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	var isTextNode = __webpack_require__(150);
@@ -19615,7 +19615,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -21069,7 +21069,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -21894,7 +21894,7 @@
 	      var array = this._array;
 	      var maxIndex = array.length - 1;
 	      var ii = 0;
-	      return new Iterator(function()
+	      return new Iterator(function() 
 	        {return ii > maxIndex ?
 	          iteratorDone() :
 	          iteratorValue(type, ii, array[reverse ? maxIndex - ii++ : ii++])}
@@ -22365,7 +22365,7 @@
 
 	    Repeat.prototype.__iterator = function(type, reverse) {var this$0 = this;
 	      var ii = 0;
-	      return new Iterator(function()
+	      return new Iterator(function() 
 	        {return ii < this$0.size ? iteratorValue(type, ii++, this$0._value) : iteratorDone()}
 	      );
 	    };
@@ -24563,7 +24563,7 @@
 	        return flipSequence;
 	      };
 	    }
-	    reversedSequence.get = function(key, notSetValue)
+	    reversedSequence.get = function(key, notSetValue) 
 	      {return iterable.get(useKeys ? key : -1 - key, notSetValue)};
 	    reversedSequence.has = function(key )
 	      {return iterable.has(useKeys ? key : -1 - key)};
@@ -24762,7 +24762,7 @@
 	        return this.cacheResult().__iterate(fn, reverse);
 	      }
 	      var iterations = 0;
-	      iterable.__iterate(function(v, k, c)
+	      iterable.__iterate(function(v, k, c) 
 	        {return predicate.call(context, v, k, c) && ++iterations && fn(v, k, this$0)}
 	      );
 	      return iterations;
@@ -24953,7 +24953,7 @@
 	    interposedSequence.size = iterable.size && iterable.size * 2 -1;
 	    interposedSequence.__iterateUncached = function(fn, reverse) {var this$0 = this;
 	      var iterations = 0;
-	      iterable.__iterate(function(v, k)
+	      iterable.__iterate(function(v, k) 
 	        {return (!iterations || fn(separator, iterations++, this$0) !== false) &&
 	        fn(v, iterations++, this$0) !== false},
 	        reverse
@@ -26519,13 +26519,13 @@
 
 	var _completionSet2 = _interopRequireDefault(_completionSet);
 
-	var _suggestionFactory = __webpack_require__(339);
+	var _suggestionFactory = __webpack_require__(338);
 
 	var _suggestionFactory2 = _interopRequireDefault(_suggestionFactory);
 
-	__webpack_require__(340);
+	__webpack_require__(339);
 
-	__webpack_require__(342);
+	__webpack_require__(341);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26729,7 +26729,7 @@
 	 *
 	 * @providesModule AtomicBlockUtils
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -26802,7 +26802,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule BlockMapBuilder
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -26836,7 +26836,7 @@
 	 *
 	 * @providesModule CharacterMetadata
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -26948,7 +26948,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule ContentBlock
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -27073,7 +27073,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule findRangesImmutable
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -27123,7 +27123,7 @@
 	 *
 	 * @providesModule DraftModifier
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -27266,7 +27266,7 @@
 	 *
 	 * @providesModule ContentStateInlineStyle
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -27345,7 +27345,7 @@
 	 *
 	 * @providesModule applyEntityToContentState
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -27394,7 +27394,7 @@
 	 *
 	 * @providesModule applyEntityToContentBlock
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -27426,7 +27426,7 @@
 	 *
 	 * @providesModule getCharacterRemovalRange
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -27515,7 +27515,7 @@
 	 *
 	 * @providesModule DraftEntity
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	var DraftEntityInstance = __webpack_require__(192);
@@ -27613,7 +27613,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule DraftEntityInstance
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -27687,7 +27687,7 @@
 	 *
 	 * @providesModule DraftEntitySegments
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -27791,7 +27791,7 @@
 	 *
 	 * @providesModule getRangesForDraftEntity
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -27836,7 +27836,7 @@
 	 *
 	 * @providesModule getContentStateFragment
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -27912,7 +27912,7 @@
 	 *
 	 * @providesModule generateRandomKey
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -27944,7 +27944,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule removeEntitiesAtEdges
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -28052,7 +28052,7 @@
 	 *
 	 * @providesModule insertFragmentIntoContentState
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -28183,7 +28183,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule insertIntoList
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -28224,7 +28224,7 @@
 	 *
 	 * @providesModule insertTextIntoContentState
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -28284,7 +28284,7 @@
 	 *
 	 * @providesModule modifyBlockForContentState
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -28326,7 +28326,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule removeRangeFromContentState
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -28423,7 +28423,7 @@
 	 *
 	 * @providesModule splitBlockInContentState
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -28497,7 +28497,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule EditorState
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -29063,7 +29063,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule BlockTree
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -29181,7 +29181,7 @@
 	 *
 	 * @providesModule ContentState
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -29332,7 +29332,7 @@
 	 *
 	 * @providesModule SelectionState
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -29470,7 +29470,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule sanitizeDraftText
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -29497,7 +29497,7 @@
 	 *
 	 * @providesModule EditorBidiService
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -29549,7 +29549,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	/**
@@ -29655,7 +29655,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	/**
@@ -29817,7 +29817,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	/**
@@ -29932,7 +29932,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	var nullthrows = function nullthrows(x) {
@@ -29958,7 +29958,7 @@
 	 *
 	 * @providesModule CompositeDraftDecorator
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -30075,7 +30075,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule DefaultDraftBlockRenderMap
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -30193,7 +30193,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule DefaultDraftInlineStyle
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -30235,7 +30235,7 @@
 	 *
 	 * @providesModule DraftEditor.react
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -30689,7 +30689,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule DraftEditorCompositionHandler
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -30899,7 +30899,7 @@
 	 *
 	 * @providesModule getEntityKeyForSelection
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -30961,7 +30961,7 @@
 	 *
 	 * @providesModule isSelectionAtLeafStart
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -31014,7 +31014,7 @@
 	 *
 	 * @providesModule DraftEditorContents.react
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -31261,7 +31261,7 @@
 	 *
 	 * @providesModule DraftEditorBlock.react
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -31472,7 +31472,7 @@
 	 *
 	 * @providesModule DraftEditorLeaf.react
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -31636,7 +31636,7 @@
 	 *
 	 * @providesModule DraftEditorTextNode.react
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -33454,7 +33454,7 @@
 	 *
 	 * @providesModule setDraftEditorSelection
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -33592,7 +33592,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule DraftOffsetKey
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -34042,7 +34042,7 @@
 	   * LICENSE file in the root directory of this source tree. An additional grant
 	   * of patent rights can be found in the PATENTS file in the same directory.
 	   *
-	   *
+	   * 
 	   * @typechecks
 	   */
 
@@ -34139,7 +34139,7 @@
 	 *
 	 * @providesModule DraftEditorDragHandler
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -34522,7 +34522,7 @@
 	 *
 	 * @providesModule findAncestorOffsetKey
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -34560,7 +34560,7 @@
 	 *
 	 * @providesModule getSelectionOffsetKeyForNode
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -34601,7 +34601,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule getTextContentFromFiles
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -34682,7 +34682,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule getUpdatedSelectionState
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -34764,7 +34764,7 @@
 	 *
 	 * @providesModule isEventHandled
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -34792,7 +34792,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule DraftEditorEditHandler
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -34840,7 +34840,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnBeforeInput
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -34965,7 +34965,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnBlur
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -35015,7 +35015,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnCompositionStart
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -35047,7 +35047,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnCopy
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -35087,7 +35087,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule getFragmentFromSelection
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -35119,7 +35119,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnCut
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -35198,7 +35198,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnDragOver
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -35228,7 +35228,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnDragStart
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -35257,7 +35257,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnFocus
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -35298,7 +35298,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnInput
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -35446,7 +35446,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnKeyDown
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -35600,7 +35600,7 @@
 	 *
 	 * @providesModule KeyBindingUtil
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -35643,7 +35643,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule SecondaryClipboard
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -35717,7 +35717,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule keyCommandBackspaceToStartOfLine
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -35769,7 +35769,7 @@
 	 *
 	 * @providesModule expandRangeToStartOfLine
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	var UnicodeUtils = __webpack_require__(268);
@@ -36182,7 +36182,7 @@
 	 *
 	 * @providesModule getRangeClientRects
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -36251,7 +36251,7 @@
 	 *
 	 * @providesModule getDraftEditorSelectionWithNodes
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -36435,7 +36435,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule moveSelectionBackward
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -36492,7 +36492,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule removeTextWithStrategy
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -36539,7 +36539,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule keyCommandBackspaceWord
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -36592,7 +36592,7 @@
 	 *
 	 * @providesModule DraftRemovableWord
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -36648,7 +36648,7 @@
 	 *
 	 * @typechecks
 	 * @stub
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -36689,7 +36689,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule keyCommandDeleteWord
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -36739,7 +36739,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule moveSelectionForward
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -36788,7 +36788,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule keyCommandInsertNewline
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -36816,7 +36816,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule keyCommandPlainBackspace
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -36865,7 +36865,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule keyCommandPlainDelete
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -36915,7 +36915,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule keyCommandMoveSelectionToEndOfBlock
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -36957,7 +36957,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule keyCommandMoveSelectionToStartOfBlock
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -36999,7 +36999,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule keyCommandTransposeCharacters
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -37082,7 +37082,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule keyCommandUndo
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -37135,7 +37135,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnPaste
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -37297,7 +37297,7 @@
 	 *
 	 * @providesModule DraftPasteProcessor
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -37348,7 +37348,7 @@
 	 *
 	 * @providesModule convertFromHTMLToContentBlocks
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -37805,7 +37805,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -37841,7 +37841,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule getSafeBodyFromHTML
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -37881,7 +37881,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule splitTextIntoTextBlocks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -37907,7 +37907,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnSelect
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -37952,7 +37952,7 @@
 	 *
 	 * @providesModule getDraftEditorSelection
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -37994,7 +37994,7 @@
 	 *
 	 * @providesModule DraftEditorPlaceholder.react
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -38068,7 +38068,7 @@
 	 *
 	 * @providesModule getDefaultKeyBinding
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -38197,7 +38197,7 @@
 	 *
 	 * @providesModule RichTextEditorUtil
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -38509,7 +38509,7 @@
 	 *
 	 * @providesModule adjustBlockDepthForContentState
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -38552,7 +38552,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule convertFromDraftStateToRaw
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -38625,7 +38625,7 @@
 	 *
 	 * @providesModule DraftStringKey
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -38656,7 +38656,7 @@
 	 *
 	 * @providesModule encodeEntityRanges
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -38702,7 +38702,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule encodeInlineStyleRanges
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -38775,7 +38775,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule convertFromRawToDraftState
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -38862,7 +38862,7 @@
 	 *
 	 * @providesModule createCharacterList
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -38897,7 +38897,7 @@
 	 *
 	 * @providesModule decodeEntityRanges
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -38942,7 +38942,7 @@
 	 *
 	 * @providesModule decodeInlineStyleRanges
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -38991,7 +38991,7 @@
 	 *
 	 * @providesModule getVisibleSelectionRect
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -39043,7 +39043,7 @@
 	 *
 	 * @providesModule getRangeBoundingClientRect
 	 * @typechecks
-	 *
+	 * 
 	 */
 
 	'use strict';
@@ -40078,7 +40078,7 @@
 	      var array = this._array;
 	      var maxIndex = array.length - 1;
 	      var ii = 0;
-	      return new Iterator(function()
+	      return new Iterator(function() 
 	        {return ii > maxIndex ?
 	          iteratorDone() :
 	          iteratorValue(type, ii, array[reverse ? maxIndex - ii++ : ii++])}
@@ -40549,7 +40549,7 @@
 
 	    Repeat.prototype.__iterator = function(type, reverse) {var this$0 = this;
 	      var ii = 0;
-	      return new Iterator(function()
+	      return new Iterator(function() 
 	        {return ii < this$0.size ? iteratorValue(type, ii++, this$0._value) : iteratorDone()}
 	      );
 	    };
@@ -42747,7 +42747,7 @@
 	        return flipSequence;
 	      };
 	    }
-	    reversedSequence.get = function(key, notSetValue)
+	    reversedSequence.get = function(key, notSetValue) 
 	      {return iterable.get(useKeys ? key : -1 - key, notSetValue)};
 	    reversedSequence.has = function(key )
 	      {return iterable.has(useKeys ? key : -1 - key)};
@@ -42946,7 +42946,7 @@
 	        return this.cacheResult().__iterate(fn, reverse);
 	      }
 	      var iterations = 0;
-	      iterable.__iterate(function(v, k, c)
+	      iterable.__iterate(function(v, k, c) 
 	        {return predicate.call(context, v, k, c) && ++iterations && fn(v, k, this$0)}
 	      );
 	      return iterations;
@@ -43137,7 +43137,7 @@
 	    interposedSequence.size = iterable.size && iterable.size * 2 -1;
 	    interposedSequence.__iterateUncached = function(fn, reverse) {var this$0 = this;
 	      var iterations = 0;
-	      iterable.__iterate(function(v, k)
+	      iterable.__iterate(function(v, k) 
 	        {return (!iterations || fn(separator, iterations++, this$0) !== false) &&
 	        fn(v, iterations++, this$0) !== false},
 	        reverse
@@ -44837,7 +44837,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _SuggestionComponentWrapper = __webpack_require__(338);
+	var _SuggestionComponentWrapper = __webpack_require__(336);
 
 	var _SuggestionComponentWrapper2 = _interopRequireDefault(_SuggestionComponentWrapper);
 
@@ -44847,19 +44847,30 @@
 
 	var _draftJs = __webpack_require__(180);
 
+	var _findCurrentAutocomplete = __webpack_require__(337);
+
+	var _findCurrentAutocomplete2 = _interopRequireDefault(_findCurrentAutocomplete);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
 	  create: function create(completionDescriptors, editorState) {
+	    var prefixes = completionDescriptors.map(function (descriptor) {
+	      return descriptor.prefix;
+	    });
+
+	    var findCurrentAutocomplete = (0, _findCurrentAutocomplete2.default)(prefixes);
+
 	    var completionPlugin = (0, _getSuggestionPluginSingleton2.default)({
-	      suggestionRegex: _getSuggestionRegex(completionDescriptors)
+	      suggestionRegex: _getSuggestionRegex(completionDescriptors),
+	      findCurrentAutocomplete: findCurrentAutocomplete
 	    });
 
 	    var decorators = completionDescriptors.map(function (descriptor) {
 	      return _createDecorator(descriptor.type);
 	    });
 
-	    var renderedSuggestionComponent = _renderSuggestionComponent(completionDescriptors, completionPlugin.CompletionSuggestions, editorState);
+	    var renderedSuggestionComponent = _renderSuggestionComponent(completionDescriptors, completionPlugin.CompletionSuggestions, editorState, findCurrentAutocomplete);
 
 	    return {
 	      decorators: decorators,
@@ -44880,11 +44891,12 @@
 	  return new RegExp('(\\W|^)' + prefixesUnionGroup + '(\\w|\\s)*(?!' + prefixesUnionGroup + ')', 'g');
 	}
 
-	function _renderSuggestionComponent(completionDescriptors, SuggestionComponent, editorState) {
+	function _renderSuggestionComponent(completionDescriptors, SuggestionComponent, editorState, findCurrentAutocomplete) {
 	  return _react2.default.createElement(_SuggestionComponentWrapper2.default, {
 	    completionDescriptors: completionDescriptors,
 	    SuggestionComponent: SuggestionComponent,
-	    editorState: editorState
+	    editorState: editorState,
+	    findCurrentAutocomplete: findCurrentAutocomplete
 	  });
 	}
 
@@ -44923,29 +44935,31 @@
 	  value: true
 	});
 
-	var _draftJsAutocompletePluginCreator = __webpack_require__(319);
+	var _autocompleteCreator = __webpack_require__(319);
 
-	var _draftJsAutocompletePluginCreator2 = _interopRequireDefault(_draftJsAutocompletePluginCreator);
+	var _autocompleteCreator2 = _interopRequireDefault(_autocompleteCreator);
 
 	var _suggestionInserter = __webpack_require__(327);
 
 	var _suggestionInserter2 = _interopRequireDefault(_suggestionInserter);
 
-	var _SuggestionEntryComponent = __webpack_require__(330);
+	var _SuggestionEntryComponent = __webpack_require__(328);
 
 	var _SuggestionEntryComponent2 = _interopRequireDefault(_SuggestionEntryComponent);
 
-	var _findWithRegex = __webpack_require__(335);
+	var _findWithRegex = __webpack_require__(333);
 
 	var _findWithRegex2 = _interopRequireDefault(_findWithRegex);
 
-	__webpack_require__(331);
+	__webpack_require__(329);
 
-	__webpack_require__(336);
+	__webpack_require__(334);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; } // use local coppoy of autocomplete-creator until we turn it into a fork
+	// import completionPluginCreator from 'draft-js-autocomplete-plugin-creator'
+
 
 	var themeKey = 'suggestions';
 
@@ -44954,27 +44968,34 @@
 	// TODO: post a bug to 'draft-js-autocomplete-plugin-creator' and add link here
 
 	exports.default = function (_ref) {
-	  var suggestionRegex = _ref.suggestionRegex;
+	  var suggestionRegex = _ref.suggestionRegex,
+	      findCurrentAutocomplete = _ref.findCurrentAutocomplete;
 
 	  if (!pluginSingleton) {
 	    pluginSingleton = createSuggestionPlugin();
 	  }
 
-	  regexSingleton = suggestionRegex;
+	  currentRegex = suggestionRegex;
+	  currentAutocompleteFinder = findCurrentAutocomplete;
 
 	  return pluginSingleton;
 	};
 
 	var pluginSingleton = void 0;
-	var regexSingleton = void 0;
+	var currentRegex = void 0;
+	var currentAutocompleteFinder = void 0;
 
 	var createSuggestionPlugin = function createSuggestionPlugin() {
 	  //this looks like a strategy to check for start of autocompleted entities
 	  var completionSuggestionStrategy = function completionSuggestionStrategy(contentBlock, callback) {
-	    (0, _findWithRegex2.default)(regexSingleton, contentBlock, callback);
+	    (0, _findWithRegex2.default)(currentRegex, contentBlock, callback);
 	  };
 
-	  var completionPluginFactory = (0, _draftJsAutocompletePluginCreator2.default)(completionSuggestionStrategy, _suggestionInserter2.default, _SuggestionEntryComponent2.default, themeKey);
+	  var findCurrentAutocomplete = function findCurrentAutocomplete(editorState) {
+	    return currentAutocompleteFinder(editorState);
+	  };
+
+	  var completionPluginFactory = (0, _autocompleteCreator2.default)(completionSuggestionStrategy, (0, _suggestionInserter2.default)(findCurrentAutocomplete), _SuggestionEntryComponent2.default, themeKey);
 
 	  return completionPluginFactory({
 	    theme: _defineProperty({}, themeKey, themeKey)
@@ -45016,13 +45037,14 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } } // TODO: turn into a fork of original repo/module after fuxing
+	// this is a copy of nhpm/draft-js-autocomplete-plugin-creator that needs some fixes
 
 	var createCompletionPlugin = function createCompletionPlugin(completionSuggestionsStrategy, addModifier, SuggestionEntry) {
-	  var suggestionsThemeKey = arguments.length <= 3 || arguments[3] === undefined ? 'completionSuggestions' : arguments[3];
-	  var additionalDecorators = arguments.length <= 4 || arguments[4] === undefined ? [] : arguments[4];
+	  var suggestionsThemeKey = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'completionSuggestions';
+	  var additionalDecorators = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : [];
 	  return function () {
-	    var config = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+	    var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
 	    var callbacks = {
 	      keyBindingFn: undefined,
@@ -45080,10 +45102,10 @@
 	      }
 	    };
 
-	    var _config$theme = config.theme;
-	    var theme = _config$theme === undefined ? {} : _config$theme;
-	    var _config$positionSugge = config.positionSuggestions;
-	    var positionSuggestions = _config$positionSugge === undefined ? _positionSuggestions2.default : _config$positionSugge;
+	    var _config$theme = config.theme,
+	        theme = _config$theme === undefined ? {} : _config$theme,
+	        _config$positionSugge = config.positionSuggestions,
+	        positionSuggestions = _config$positionSugge === undefined ? _positionSuggestions2.default : _config$positionSugge;
 
 	    var completionSearchProps = {
 	      ariaProps: ariaProps,
@@ -45112,8 +45134,8 @@
 	      },
 
 	      initialize: function initialize(_ref) {
-	        var getEditorState = _ref.getEditorState;
-	        var setEditorState = _ref.setEditorState;
+	        var getEditorState = _ref.getEditorState,
+	            setEditorState = _ref.setEditorState;
 
 	        store.getEditorState = getEditorState;
 	        store.setEditorState = setEditorState;
@@ -45166,7 +45188,7 @@
 	    _inherits(CompletionSuggestions, _Component);
 
 	    function CompletionSuggestions() {
-	      var _Object$getPrototypeO;
+	      var _ref;
 
 	      var _temp, _this, _ret;
 
@@ -45176,7 +45198,7 @@
 	        args[_key] = arguments[_key];
 	      }
 
-	      return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(CompletionSuggestions)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.state = {
+	      return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = CompletionSuggestions.__proto__ || Object.getPrototypeOf(CompletionSuggestions)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
 	        isActive: false,
 	        focusedOptionIndex: 0
 	      }, _this.componentDidUpdate = function (prevProps, prevState) {
@@ -45236,13 +45258,13 @@
 	        });
 
 	        // a leave can be empty when it is removed due e.g. using backspace
-	        var leaves = offsetDetails.filter(function (_ref) {
-	          var blockKey = _ref.blockKey;
-	          return blockKey === anchorKey;
-	        }).map(function (_ref2) {
+	        var leaves = offsetDetails.filter(function (_ref2) {
 	          var blockKey = _ref2.blockKey;
-	          var decoratorKey = _ref2.decoratorKey;
-	          var leafKey = _ref2.leafKey;
+	          return blockKey === anchorKey;
+	        }).map(function (_ref3) {
+	          var blockKey = _ref3.blockKey,
+	              decoratorKey = _ref3.decoratorKey,
+	              leafKey = _ref3.leafKey;
 	          return editorState.getBlockTree(blockKey).getIn([decoratorKey, 'leaves', leafKey]);
 	        });
 
@@ -45258,9 +45280,9 @@
 	        // the 'autocomplete character' causes troubles due selection confusion.
 	        var selectionIsInsideWord = leaves.filter(function (leave) {
 	          return leave !== undefined;
-	        }).map(function (_ref3) {
-	          var start = _ref3.start;
-	          var end = _ref3.end;
+	        }).map(function (_ref4) {
+	          var start = _ref4.start,
+	              end = _ref4.end;
 	          return start === 0 && anchorOffset === 1 && anchorOffset <= end || // @ is the first character
 	          anchorOffset > start + 1 && anchorOffset <= end // @ is in the text or at the end
 	          ;
@@ -45301,14 +45323,21 @@
 
 	        return editorState;
 	      }, _this.onSearchChange = function (editorState, selection) {
-	        var _getSearchText = (0, _getSearchText3.default)(editorState, selection);
+	        var findCurrentAutocomplete = _this.props.findCurrentAutocomplete;
 
-	        var word = _getSearchText.word;
+	        var currentAutocomplete = findCurrentAutocomplete(editorState);
 
-	        var searchValue = word.substring(1, word.length);
-	        if (_this.lastSearchValue !== searchValue) {
+	        console.log('>>>> selection: ', selection);
+
+	        console.log('>>>> current autocomplete: ', currentAutocomplete);
+
+	        var searchValue = currentAutocomplete.searchValueWithoutPrefix;
+	        var prefix = currentAutocomplete.prefix;
+
+	        if (_this.lastSearchValue !== searchValue || _this.lastPrefix !== prefix) {
 	          _this.lastSearchValue = searchValue;
-	          _this.props.onSearchChange({ value: searchValue });
+	          _this.lastPrefix = prefix;
+	          _this.props.onSearchChange({ value: searchValue, prefix: prefix });
 	        }
 	      }, _this.onDownArrow = function (keyboardEvent) {
 	        keyboardEvent.preventDefault();
@@ -45414,8 +45443,8 @@
 	          return null;
 	        }
 
-	        var _props$theme = this.props.theme;
-	        var theme = _props$theme === undefined ? {} : _props$theme;
+	        var _props$theme = this.props.theme,
+	            theme = _props$theme === undefined ? {} : _props$theme;
 
 	        return _react2.default.createElement(
 	          'div',
@@ -45457,9 +45486,9 @@
 
 	var _draftJs = __webpack_require__(180);
 
-	var _getSearchText2 = __webpack_require__(322);
+	var _getSearchText = __webpack_require__(322);
 
-	var _getSearchText3 = _interopRequireDefault(_getSearchText2);
+	var _getSearchText2 = _interopRequireDefault(_getSearchText);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45482,13 +45511,11 @@
 	var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
 	var decodeOffsetKey = function decodeOffsetKey(offsetKey) {
-	  var _offsetKey$split = offsetKey.split('-');
-
-	  var _offsetKey$split2 = _slicedToArray(_offsetKey$split, 3);
-
-	  var blockKey = _offsetKey$split2[0];
-	  var decoratorKey = _offsetKey$split2[1];
-	  var leafKey = _offsetKey$split2[2];
+	  var _offsetKey$split = offsetKey.split('-'),
+	      _offsetKey$split2 = _slicedToArray(_offsetKey$split, 3),
+	      blockKey = _offsetKey$split2[0],
+	      decoratorKey = _offsetKey$split2[1],
+	      leafKey = _offsetKey$split2[2];
 
 	  return {
 	    blockKey: blockKey,
@@ -45593,7 +45620,7 @@
 	  function CompletionSuggestionsPortal() {
 	    _classCallCheck(this, CompletionSuggestionsPortal);
 
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(CompletionSuggestionsPortal).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (CompletionSuggestionsPortal.__proto__ || Object.getPrototypeOf(CompletionSuggestionsPortal)).apply(this, arguments));
 	  }
 
 	  _createClass(CompletionSuggestionsPortal, [{
@@ -45684,10 +45711,10 @@
 	};
 
 	var positionSuggestions = function positionSuggestions(_ref) {
-	  var decoratorRect = _ref.decoratorRect;
-	  var popover = _ref.popover;
-	  var state = _ref.state;
-	  var props = _ref.props;
+	  var decoratorRect = _ref.decoratorRect,
+	      popover = _ref.popover,
+	      state = _ref.state,
+	      props = _ref.props;
 
 	  var relativeParent = getRelativeParent(popover.parentElement);
 	  var relativeRect = {};
@@ -45749,26 +45776,23 @@
 
 	var _constants2 = _interopRequireDefault(_constants);
 
-	var _getSearchText2 = __webpack_require__(328);
-
-	var _getSearchText3 = _interopRequireDefault(_getSearchText2);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	exports.default = function (editorState, suggestion) {
-	  var currentSelectionState = editorState.getSelection();
+	var createInserter = function createInserter(findCurrentAutocomplete) {
+	  return function (editorState, suggestion) {
+	    return insertSuggestion(editorState, suggestion, findCurrentAutocomplete);
+	  };
+	};
 
-	  var _getSearchText = (0, _getSearchText3.default)(editorState, currentSelectionState),
-	      begin = _getSearchText.begin,
-	      end = _getSearchText.end;
+	exports.default = createInserter;
+
+
+	function insertSuggestion(editorState, suggestion, findCurrentAutocomplete) {
+
+	  var currentAutocomplete = findCurrentAutocomplete(editorState);
 
 	  // get selection of the suggestion search text
-
-
-	  var suggestionTextSelection = currentSelectionState.merge({
-	    anchorOffset: begin,
-	    focusOffset: end
-	  });
+	  var suggestionTextSelection = currentAutocomplete.selection;
 
 	  var newContent = suggestion.getTextForEditor();
 
@@ -45778,9 +45802,9 @@
 	  // a smooth writing experience.
 	  var blockKey = suggestionTextSelection.getAnchorKey();
 	  var blockSize = editorState.getCurrentContent().getBlockForKey(blockKey).getLength();
-	  var needAddSpace = blockSize === end;
+	  var needAddSpace = blockSize === suggestionTextSelection.getFocusOffset();
 
-	  var newTextSelection = suggestionTextSelection.merge({ focusOffset: begin + newContent.length });
+	  var newTextSelection = suggestionTextSelection.merge({ focusOffset: suggestionTextSelection.getAnchorOffset() + newContent.length });
 
 	  var key = _draftJs.Entity.create(_constants2.default.ENTITY_TYPE, 'IMMUTABLE', {
 	    completionType: suggestion.getType()
@@ -45805,74 +45829,10 @@
 	  }
 
 	  return updatedEditorState;
-	};
+	}
 
 /***/ },
 /* 328 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _getWordAt = __webpack_require__(329);
-
-	var _getWordAt2 = _interopRequireDefault(_getWordAt);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var getSearchText = function getSearchText(editorState, selection) {
-	  var anchorKey = selection.getAnchorKey();
-	  var anchorOffset = selection.getAnchorOffset() - 1;
-	  var currentContent = editorState.getCurrentContent();
-	  var currentBlock = currentContent.getBlockForKey(anchorKey);
-	  var blockText = currentBlock.getText();
-	  return (0, _getWordAt2.default)(blockText, anchorOffset);
-	};
-
-	exports.default = getSearchText;
-
-/***/ },
-/* 329 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var getWordAt = function getWordAt(string, position) {
-	  // Perform type conversions.
-	  var str = String(string);
-	  var pos = Number(position) >>> 0;
-
-	  // Search for the word's beginning and end.
-	  var left = str.slice(0, pos + 1).search(/\S+$/);
-	  var right = str.slice(pos).search(/\s/);
-
-	  // The last word in the string is a special case.
-	  if (right < 0) {
-	    return {
-	      word: str.slice(left),
-	      begin: left,
-	      end: str.length
-	    };
-	  }
-
-	  // Return the word, using the located bounds to extract it from the string.
-	  return {
-	    word: str.slice(left, right + pos),
-	    begin: left,
-	    end: right + pos
-	  };
-	};
-
-	exports.default = getWordAt;
-
-/***/ },
-/* 330 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45887,7 +45847,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(331);
+	__webpack_require__(329);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45963,16 +45923,16 @@
 	exports.default = SuggestionEntryComponent;
 
 /***/ },
-/* 331 */
+/* 329 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(332);
+	var content = __webpack_require__(330);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(334)(content, {});
+	var update = __webpack_require__(332)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -45989,10 +45949,10 @@
 	}
 
 /***/ },
-/* 332 */
+/* 330 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(333)();
+	exports = module.exports = __webpack_require__(331)();
 	// imports
 
 
@@ -46003,7 +45963,7 @@
 
 
 /***/ },
-/* 333 */
+/* 331 */
 /***/ function(module, exports) {
 
 	/*
@@ -46059,7 +46019,7 @@
 
 
 /***/ },
-/* 334 */
+/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -46311,7 +46271,7 @@
 
 
 /***/ },
-/* 335 */
+/* 333 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -46337,16 +46297,16 @@
 
 
 /***/ },
-/* 336 */
+/* 334 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(337);
+	var content = __webpack_require__(335);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(334)(content, {});
+	var update = __webpack_require__(332)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -46363,10 +46323,10 @@
 	}
 
 /***/ },
-/* 337 */
+/* 335 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(333)();
+	exports = module.exports = __webpack_require__(331)();
 	// imports
 
 
@@ -46377,7 +46337,7 @@
 
 
 /***/ },
-/* 338 */
+/* 336 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46411,15 +46371,18 @@
 	    var _this = _possibleConstructorReturn(this, (SuggestionComponentWrapper.__proto__ || Object.getPrototypeOf(SuggestionComponentWrapper)).call(this, props));
 
 	    _this.onSearchChange = function (_ref) {
-	      var value = _ref.value;
+	      var value = _ref.value,
+	          prefix = _ref.prefix;
 
 	      _this.setState({
-	        currentSearch: value
+	        currentSearch: value,
+	        currentPrefix: prefix
 	      });
 	    };
 
 	    _this.state = {
-	      currentSearch: null
+	      currentSearch: null,
+	      currentPrefix: null
 	    };
 	    return _this;
 	  }
@@ -46429,21 +46392,24 @@
 	    value: function render() {
 	      var _props = this.props,
 	          SuggestionComponent = _props.SuggestionComponent,
-	          completionDescriptors = _props.completionDescriptors,
-	          editorState = _props.editorState;
+	          findCurrentAutocomplete = _props.findCurrentAutocomplete;
 
-
-	      var currentSearch = this.state.currentSearch;
 
 	      return _react2.default.createElement(SuggestionComponent, {
+	        findCurrentAutocomplete: findCurrentAutocomplete,
 	        onSearchChange: this.onSearchChange,
-	        suggestions: this._getFilteredSuggestions(currentSearch, completionDescriptors, editorState)
+	        suggestions: this._getFilteredSuggestions()
 	      });
 	    }
 	  }, {
 	    key: '_getFilteredSuggestions',
-	    value: function _getFilteredSuggestions(currentSearch, completionDescriptors, editorState) {
-	      var allSuggestions = this._getCurrentDescriptor(completionDescriptors, currentSearch, editorState) || (0, _immutable.List)();
+	    value: function _getFilteredSuggestions() {
+	      var currentDescriptor = this._getCurrentDescriptor();
+
+	      console.log('>>>> current descriptor: ', currentDescriptor);
+	      var allSuggestions = currentDescriptor ? currentDescriptor.suggestions : (0, _immutable.List)();
+
+	      var currentSearch = this.state.currentSearch;
 
 	      var currentSearchIsEmpty = !currentSearch || currentSearch === '';
 	      var currentFilteredSuggestions = currentSearchIsEmpty ? allSuggestions : allSuggestions.filter(function (suggestion) {
@@ -46454,36 +46420,12 @@
 	    }
 	  }, {
 	    key: '_getCurrentDescriptor',
-	    value: function _getCurrentSuggestions(completionDescriptors, currentSearch, editorState) {
-	      var textEndingWithCurrentSearchPrefix = this._getTextEndingWithCurrentSearchPrefix(currentSearch, editorState);
+	    value: function _getCurrentDescriptor() {
+	      var _this2 = this;
 
-	      var currentSuggestions = void 0;
-
-	      completionDescriptors.map(function (descriptor) {
-	        if (textEndingWithCurrentSearchPrefix.endsWith(descriptor.prefix)) {
-	          currentSuggestions = descriptor.suggestions;
-	        }
-	      });
-
-	      return currentSuggestions;
-	    }
-	  }, {
-	    key: '_getTextEndingWithCurrentSearchPrefix',
-	    value: function _getTextEndingWithCurrentSearchPrefix(currentSearch, editorState) {
-	      if (!currentSearch) {
-	        currentSearch = '';
-	      }
-
-	      var currentSelection = editorState.getSelection();
-
-	      var currentContentState = editorState.getCurrentContent();
-	      var currentBlock = currentContentState.getBlockForKey(currentSelection.getStartKey());
-
-	      var blockText = currentBlock.getText();
-
-	      var searchStartIndex = currentSelection.getStartOffset() - currentSearch.length;
-
-	      return blockText.substring(0, searchStartIndex);
+	      return this.props.completionDescriptors.filter(function (descriptor) {
+	        return descriptor.prefix === _this2.state.currentPrefix;
+	      })[0];
 	    }
 	  }]);
 
@@ -46493,7 +46435,61 @@
 	exports.default = SuggestionComponentWrapper;
 
 /***/ },
-/* 339 */
+/* 337 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = createFinder;
+	function createFinder(possiblePrefixes) {
+	  return function (editorState) {
+	    return findCurrentAutocomplete(editorState, possiblePrefixes);
+	  };
+	}
+
+	function findCurrentAutocomplete(editorState, possiblePrefixes) {
+
+	  var currentSelection = editorState.getSelection();
+
+	  var currentContentState = editorState.getCurrentContent();
+	  var currentBlock = currentContentState.getBlockForKey(currentSelection.getStartKey());
+
+	  var blockText = currentBlock.getText();
+
+	  var selectionStart = currentSelection.getStartOffset();
+	  var textEndingWithSelection = blockText.substring(0, selectionStart);
+
+	  var lastPrefixBeforeCurrentSelection = null;
+	  var lastPrefixIndex = null;
+
+	  possiblePrefixes.map(function (currentPrefix) {
+	    var currentPrefixIndex = textEndingWithSelection.lastIndexOf(currentPrefix);
+
+	    if (currentPrefixIndex >= 0) {
+	      if (lastPrefixIndex === null || lastPrefixIndex < currentPrefixIndex) {
+	        lastPrefixIndex = currentPrefixIndex;
+	        lastPrefixBeforeCurrentSelection = currentPrefix;
+	      }
+	    }
+	  });
+
+	  var textAfterLastPrefix = lastPrefixBeforeCurrentSelection ? textEndingWithSelection.substring(lastPrefixIndex + lastPrefixBeforeCurrentSelection.length) : null;
+
+	  return lastPrefixBeforeCurrentSelection ? {
+	    prefix: lastPrefixBeforeCurrentSelection,
+	    searchValueWithoutPrefix: textAfterLastPrefix,
+	    selection: currentSelection.merge({
+	      anchorOffset: lastPrefixIndex,
+	      focusOffset: selectionStart
+	    })
+	  } : null;
+	}
+
+/***/ },
+/* 338 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46605,16 +46601,16 @@
 	}();
 
 /***/ },
-/* 340 */
+/* 339 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(341);
+	var content = __webpack_require__(340);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(334)(content, {});
+	var update = __webpack_require__(332)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -46631,10 +46627,10 @@
 	}
 
 /***/ },
-/* 341 */
+/* 340 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(333)();
+	exports = module.exports = __webpack_require__(331)();
 	// imports
 
 
@@ -46645,16 +46641,16 @@
 
 
 /***/ },
-/* 342 */
+/* 341 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(343);
+	var content = __webpack_require__(342);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(334)(content, {});
+	var update = __webpack_require__(332)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -46671,10 +46667,10 @@
 	}
 
 /***/ },
-/* 343 */
+/* 342 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(333)();
+	exports = module.exports = __webpack_require__(331)();
 	// imports
 
 
