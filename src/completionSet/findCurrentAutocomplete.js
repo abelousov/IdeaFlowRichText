@@ -5,7 +5,28 @@ export default function createFinder (possiblePrefixes) {
 }
 
 function findCurrentAutocomplete (editorState, possiblePrefixes) {
+  const {textBeforeSelectionStart, textAfterSelectionStart} = _getCurrentTextSplitBySelectionStart(editorState)
 
+  const {autocompleteStart, prefix, valuePartBeforeSelectionStart} = _extractCurrentPrefix(textBeforeSelectionStart, possiblePrefixes)
+
+  if (!prefix) {
+    return null
+  }
+
+  const valuePartAfterSelectionStart = _extractValuePartAfterSelectionStart(textBeforeSelectionStart, textAfterSelectionStart)
+
+  const value = valuePartBeforeSelectionStart + valuePartAfterSelectionStart
+
+  const valueStart = autocompleteStart + prefix.length
+
+  return {
+    prefix,
+    searchValueWithoutPrefix: value,
+    selection: _getSelectionForString({editorState, startIndex: valueStart, str: value})
+  }
+}
+
+function _getCurrentTextSplitBySelectionStart (editorState) {
   const currentSelection = editorState.getSelection();
 
   const currentContentState = editorState.getCurrentContent()
@@ -13,51 +34,57 @@ function findCurrentAutocomplete (editorState, possiblePrefixes) {
 
   const wholeText = currentBlock.getText()
 
-  const selectionStartIndex = currentSelection.getStartOffset();
-  const textBeforeSelectionStart = wholeText.substring(0, selectionStartIndex)
+  const selectionStart = currentSelection.getStartOffset();
 
-  let lastPrefixBeforeCurrentSelection = null
-  let lastPrefixStartIndex = null
+  return {
+    textBeforeSelectionStart: wholeText.substring(0, selectionStart),
+    textAfterSelectionStart: wholeText.substring(selectionStart)
+  }
+}
+
+function _extractCurrentPrefix (textBeforeSelectionStart, possiblePrefixes) {
+  let lastPrefixBeforeSelection = null
+  let lastPrefixStart = null
 
   possiblePrefixes.map((currentPrefix) => {
-    const currentPrefixIndex = textBeforeSelectionStart.lastIndexOf(currentPrefix)
+    const currentPrefixStart = textBeforeSelectionStart.lastIndexOf(currentPrefix)
 
-    if (currentPrefixIndex >= 0) {
-      if (lastPrefixStartIndex === null || lastPrefixStartIndex < currentPrefixIndex) {
-        lastPrefixStartIndex = currentPrefixIndex
-        lastPrefixBeforeCurrentSelection = currentPrefix
+    if (currentPrefixStart >= 0) {
+      if (lastPrefixStart === null || lastPrefixStart < currentPrefixStart) {
+        lastPrefixStart = currentPrefixStart
+        lastPrefixBeforeSelection = currentPrefix
       }
     }
   })
 
-  if (!lastPrefixBeforeCurrentSelection) {
-    return null
+  const [prefix, autocompleteStart] = [lastPrefixBeforeSelection, lastPrefixStart]
+
+  if (!prefix) {
+    return {}
   }
 
-  const lastPrefixEndIndex = lastPrefixStartIndex + lastPrefixBeforeCurrentSelection.length;
-  const textBetweenLastPrefixAndSelectionStart = textBeforeSelectionStart.substring(lastPrefixEndIndex)
+  const valuePartBeforeSelectionStart = textBeforeSelectionStart.substring(autocompleteStart + prefix.length)
 
-  const textAfterSelectionStart = wholeText.substring(selectionStartIndex)
+  return {
+    prefix,
+    valuePartBeforeSelectionStart,
+    autocompleteStart
+  }
+}
+
+function _extractValuePartAfterSelectionStart (textBeforeSelectionStart, textAfterSelectionStart) {
   const wordPartAfterSelectionStart = textAfterSelectionStart.match(/^\w*/)[0]
   const wordPartBeforeSelectionStart = textBeforeSelectionStart.match(/\w*$/)[0]
 
   const selectionStartIsInsideWord = wordPartBeforeSelectionStart.length > 0 && wordPartAfterSelectionStart.length > 0
 
-  const autocompleteStartIndex = lastPrefixEndIndex
-  let autocompleteEndIndex = selectionStartIndex
+  return selectionStartIsInsideWord ? wordPartAfterSelectionStart : ''
+}
 
-  if (selectionStartIsInsideWord) {
-    autocompleteEndIndex += wordPartAfterSelectionStart.length
-  }
+function _getSelectionForString ({editorState, startIndex, str}) {
+  return editorState.getSelection().merge({
+    anchorOffset: startIndex,
+    focusOffset: startIndex + str.length
+  })
 
-  const autocompleteValue = wholeText.substring(autocompleteStartIndex, autocompleteEndIndex)
-
-  return {
-    prefix: lastPrefixBeforeCurrentSelection,
-    searchValueWithoutPrefix: autocompleteValue,
-    selection: currentSelection.merge({
-      anchorOffset: autocompleteStartIndex,
-      focusOffset: autocompleteEndIndex
-    })
-  }
 }
