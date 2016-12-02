@@ -683,7 +683,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -812,7 +812,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 	'use strict';
 
@@ -1256,7 +1256,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -1365,7 +1365,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	function makeEmptyFunction(arg) {
@@ -1406,7 +1406,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -1437,7 +1437,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -1642,7 +1642,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -1687,7 +1687,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -2767,7 +2767,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -3204,7 +3204,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -3635,7 +3635,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -4474,7 +4474,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 	'use strict';
 
@@ -5733,7 +5733,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -6224,7 +6224,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -6306,7 +6306,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -6369,7 +6369,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -6543,7 +6543,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -7644,7 +7644,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -7768,7 +7768,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -7967,7 +7967,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -8060,7 +8060,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -8159,7 +8159,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -8188,7 +8188,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -8554,7 +8554,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -8596,7 +8596,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -8699,7 +8699,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -9032,7 +9032,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -12466,7 +12466,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 * @typechecks static-only
 	 */
 
@@ -13659,7 +13659,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -14627,7 +14627,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -15919,7 +15919,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -16056,7 +16056,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -16087,7 +16087,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	/*eslint-disable no-self-compare */
@@ -16319,7 +16319,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -16344,7 +16344,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -16588,7 +16588,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -16612,7 +16612,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -16657,7 +16657,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -16833,7 +16833,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -18977,7 +18977,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	var isTextNode = __webpack_require__(150);
@@ -19615,7 +19615,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -21069,7 +21069,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -21894,7 +21894,7 @@
 	      var array = this._array;
 	      var maxIndex = array.length - 1;
 	      var ii = 0;
-	      return new Iterator(function() 
+	      return new Iterator(function()
 	        {return ii > maxIndex ?
 	          iteratorDone() :
 	          iteratorValue(type, ii, array[reverse ? maxIndex - ii++ : ii++])}
@@ -22365,7 +22365,7 @@
 
 	    Repeat.prototype.__iterator = function(type, reverse) {var this$0 = this;
 	      var ii = 0;
-	      return new Iterator(function() 
+	      return new Iterator(function()
 	        {return ii < this$0.size ? iteratorValue(type, ii++, this$0._value) : iteratorDone()}
 	      );
 	    };
@@ -24563,7 +24563,7 @@
 	        return flipSequence;
 	      };
 	    }
-	    reversedSequence.get = function(key, notSetValue) 
+	    reversedSequence.get = function(key, notSetValue)
 	      {return iterable.get(useKeys ? key : -1 - key, notSetValue)};
 	    reversedSequence.has = function(key )
 	      {return iterable.has(useKeys ? key : -1 - key)};
@@ -24762,7 +24762,7 @@
 	        return this.cacheResult().__iterate(fn, reverse);
 	      }
 	      var iterations = 0;
-	      iterable.__iterate(function(v, k, c) 
+	      iterable.__iterate(function(v, k, c)
 	        {return predicate.call(context, v, k, c) && ++iterations && fn(v, k, this$0)}
 	      );
 	      return iterations;
@@ -24953,7 +24953,7 @@
 	    interposedSequence.size = iterable.size && iterable.size * 2 -1;
 	    interposedSequence.__iterateUncached = function(fn, reverse) {var this$0 = this;
 	      var iterations = 0;
-	      iterable.__iterate(function(v, k) 
+	      iterable.__iterate(function(v, k)
 	        {return (!iterations || fn(separator, iterations++, this$0) !== false) &&
 	        fn(v, iterations++, this$0) !== false},
 	        reverse
@@ -26729,7 +26729,7 @@
 	 *
 	 * @providesModule AtomicBlockUtils
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -26802,7 +26802,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule BlockMapBuilder
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -26836,7 +26836,7 @@
 	 *
 	 * @providesModule CharacterMetadata
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -26948,7 +26948,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule ContentBlock
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -27073,7 +27073,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule findRangesImmutable
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -27123,7 +27123,7 @@
 	 *
 	 * @providesModule DraftModifier
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -27266,7 +27266,7 @@
 	 *
 	 * @providesModule ContentStateInlineStyle
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -27345,7 +27345,7 @@
 	 *
 	 * @providesModule applyEntityToContentState
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -27394,7 +27394,7 @@
 	 *
 	 * @providesModule applyEntityToContentBlock
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -27426,7 +27426,7 @@
 	 *
 	 * @providesModule getCharacterRemovalRange
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -27515,7 +27515,7 @@
 	 *
 	 * @providesModule DraftEntity
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	var DraftEntityInstance = __webpack_require__(192);
@@ -27613,7 +27613,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule DraftEntityInstance
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -27687,7 +27687,7 @@
 	 *
 	 * @providesModule DraftEntitySegments
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -27791,7 +27791,7 @@
 	 *
 	 * @providesModule getRangesForDraftEntity
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -27836,7 +27836,7 @@
 	 *
 	 * @providesModule getContentStateFragment
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -27912,7 +27912,7 @@
 	 *
 	 * @providesModule generateRandomKey
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -27944,7 +27944,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule removeEntitiesAtEdges
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -28052,7 +28052,7 @@
 	 *
 	 * @providesModule insertFragmentIntoContentState
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -28183,7 +28183,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule insertIntoList
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -28224,7 +28224,7 @@
 	 *
 	 * @providesModule insertTextIntoContentState
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -28284,7 +28284,7 @@
 	 *
 	 * @providesModule modifyBlockForContentState
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -28326,7 +28326,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule removeRangeFromContentState
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -28423,7 +28423,7 @@
 	 *
 	 * @providesModule splitBlockInContentState
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -28497,7 +28497,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule EditorState
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -29063,7 +29063,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule BlockTree
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -29181,7 +29181,7 @@
 	 *
 	 * @providesModule ContentState
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -29332,7 +29332,7 @@
 	 *
 	 * @providesModule SelectionState
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -29470,7 +29470,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule sanitizeDraftText
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -29497,7 +29497,7 @@
 	 *
 	 * @providesModule EditorBidiService
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -29549,7 +29549,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	/**
@@ -29655,7 +29655,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	/**
@@ -29817,7 +29817,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	/**
@@ -29932,7 +29932,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	var nullthrows = function nullthrows(x) {
@@ -29958,7 +29958,7 @@
 	 *
 	 * @providesModule CompositeDraftDecorator
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -30075,7 +30075,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule DefaultDraftBlockRenderMap
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -30193,7 +30193,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule DefaultDraftInlineStyle
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -30235,7 +30235,7 @@
 	 *
 	 * @providesModule DraftEditor.react
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -30689,7 +30689,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule DraftEditorCompositionHandler
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -30899,7 +30899,7 @@
 	 *
 	 * @providesModule getEntityKeyForSelection
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -30961,7 +30961,7 @@
 	 *
 	 * @providesModule isSelectionAtLeafStart
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -31014,7 +31014,7 @@
 	 *
 	 * @providesModule DraftEditorContents.react
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -31261,7 +31261,7 @@
 	 *
 	 * @providesModule DraftEditorBlock.react
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -31472,7 +31472,7 @@
 	 *
 	 * @providesModule DraftEditorLeaf.react
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -31636,7 +31636,7 @@
 	 *
 	 * @providesModule DraftEditorTextNode.react
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -33454,7 +33454,7 @@
 	 *
 	 * @providesModule setDraftEditorSelection
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -33592,7 +33592,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule DraftOffsetKey
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -34042,7 +34042,7 @@
 	   * LICENSE file in the root directory of this source tree. An additional grant
 	   * of patent rights can be found in the PATENTS file in the same directory.
 	   *
-	   * 
+	   *
 	   * @typechecks
 	   */
 
@@ -34139,7 +34139,7 @@
 	 *
 	 * @providesModule DraftEditorDragHandler
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -34522,7 +34522,7 @@
 	 *
 	 * @providesModule findAncestorOffsetKey
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -34560,7 +34560,7 @@
 	 *
 	 * @providesModule getSelectionOffsetKeyForNode
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -34601,7 +34601,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule getTextContentFromFiles
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -34682,7 +34682,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule getUpdatedSelectionState
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -34764,7 +34764,7 @@
 	 *
 	 * @providesModule isEventHandled
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -34792,7 +34792,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule DraftEditorEditHandler
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -34840,7 +34840,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnBeforeInput
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -34965,7 +34965,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnBlur
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -35015,7 +35015,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnCompositionStart
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -35047,7 +35047,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnCopy
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -35087,7 +35087,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule getFragmentFromSelection
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -35119,7 +35119,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnCut
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -35198,7 +35198,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnDragOver
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -35228,7 +35228,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnDragStart
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -35257,7 +35257,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnFocus
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -35298,7 +35298,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnInput
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -35446,7 +35446,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnKeyDown
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -35600,7 +35600,7 @@
 	 *
 	 * @providesModule KeyBindingUtil
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -35643,7 +35643,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule SecondaryClipboard
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -35717,7 +35717,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule keyCommandBackspaceToStartOfLine
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -35769,7 +35769,7 @@
 	 *
 	 * @providesModule expandRangeToStartOfLine
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	var UnicodeUtils = __webpack_require__(268);
@@ -36182,7 +36182,7 @@
 	 *
 	 * @providesModule getRangeClientRects
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -36251,7 +36251,7 @@
 	 *
 	 * @providesModule getDraftEditorSelectionWithNodes
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -36435,7 +36435,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule moveSelectionBackward
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -36492,7 +36492,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule removeTextWithStrategy
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -36539,7 +36539,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule keyCommandBackspaceWord
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -36592,7 +36592,7 @@
 	 *
 	 * @providesModule DraftRemovableWord
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -36648,7 +36648,7 @@
 	 *
 	 * @typechecks
 	 * @stub
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -36689,7 +36689,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule keyCommandDeleteWord
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -36739,7 +36739,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule moveSelectionForward
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -36788,7 +36788,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule keyCommandInsertNewline
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -36816,7 +36816,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule keyCommandPlainBackspace
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -36865,7 +36865,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule keyCommandPlainDelete
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -36915,7 +36915,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule keyCommandMoveSelectionToEndOfBlock
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -36957,7 +36957,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule keyCommandMoveSelectionToStartOfBlock
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -36999,7 +36999,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule keyCommandTransposeCharacters
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -37082,7 +37082,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule keyCommandUndo
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -37135,7 +37135,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnPaste
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -37297,7 +37297,7 @@
 	 *
 	 * @providesModule DraftPasteProcessor
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -37348,7 +37348,7 @@
 	 *
 	 * @providesModule convertFromHTMLToContentBlocks
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -37805,7 +37805,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -37841,7 +37841,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule getSafeBodyFromHTML
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -37881,7 +37881,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule splitTextIntoTextBlocks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -37907,7 +37907,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule editOnSelect
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -37952,7 +37952,7 @@
 	 *
 	 * @providesModule getDraftEditorSelection
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -37994,7 +37994,7 @@
 	 *
 	 * @providesModule DraftEditorPlaceholder.react
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -38068,7 +38068,7 @@
 	 *
 	 * @providesModule getDefaultKeyBinding
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -38197,7 +38197,7 @@
 	 *
 	 * @providesModule RichTextEditorUtil
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -38509,7 +38509,7 @@
 	 *
 	 * @providesModule adjustBlockDepthForContentState
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -38552,7 +38552,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule convertFromDraftStateToRaw
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -38625,7 +38625,7 @@
 	 *
 	 * @providesModule DraftStringKey
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -38656,7 +38656,7 @@
 	 *
 	 * @providesModule encodeEntityRanges
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -38702,7 +38702,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule encodeInlineStyleRanges
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -38775,7 +38775,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 * @providesModule convertFromRawToDraftState
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -38862,7 +38862,7 @@
 	 *
 	 * @providesModule createCharacterList
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -38897,7 +38897,7 @@
 	 *
 	 * @providesModule decodeEntityRanges
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -38942,7 +38942,7 @@
 	 *
 	 * @providesModule decodeInlineStyleRanges
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -38991,7 +38991,7 @@
 	 *
 	 * @providesModule getVisibleSelectionRect
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -39043,7 +39043,7 @@
 	 *
 	 * @providesModule getRangeBoundingClientRect
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -40078,7 +40078,7 @@
 	      var array = this._array;
 	      var maxIndex = array.length - 1;
 	      var ii = 0;
-	      return new Iterator(function() 
+	      return new Iterator(function()
 	        {return ii > maxIndex ?
 	          iteratorDone() :
 	          iteratorValue(type, ii, array[reverse ? maxIndex - ii++ : ii++])}
@@ -40549,7 +40549,7 @@
 
 	    Repeat.prototype.__iterator = function(type, reverse) {var this$0 = this;
 	      var ii = 0;
-	      return new Iterator(function() 
+	      return new Iterator(function()
 	        {return ii < this$0.size ? iteratorValue(type, ii++, this$0._value) : iteratorDone()}
 	      );
 	    };
@@ -42747,7 +42747,7 @@
 	        return flipSequence;
 	      };
 	    }
-	    reversedSequence.get = function(key, notSetValue) 
+	    reversedSequence.get = function(key, notSetValue)
 	      {return iterable.get(useKeys ? key : -1 - key, notSetValue)};
 	    reversedSequence.has = function(key )
 	      {return iterable.has(useKeys ? key : -1 - key)};
@@ -42946,7 +42946,7 @@
 	        return this.cacheResult().__iterate(fn, reverse);
 	      }
 	      var iterations = 0;
-	      iterable.__iterate(function(v, k, c) 
+	      iterable.__iterate(function(v, k, c)
 	        {return predicate.call(context, v, k, c) && ++iterations && fn(v, k, this$0)}
 	      );
 	      return iterations;
@@ -43137,7 +43137,7 @@
 	    interposedSequence.size = iterable.size && iterable.size * 2 -1;
 	    interposedSequence.__iterateUncached = function(fn, reverse) {var this$0 = this;
 	      var iterations = 0;
-	      iterable.__iterate(function(v, k) 
+	      iterable.__iterate(function(v, k)
 	        {return (!iterations || fn(separator, iterations++, this$0) !== false) &&
 	        fn(v, iterations++, this$0) !== false},
 	        reverse
@@ -46443,7 +46443,7 @@
 	  }, {
 	    key: '_getFilteredSuggestions',
 	    value: function _getFilteredSuggestions(currentSearch, completionDescriptors, editorState) {
-	      var allSuggestions = this._getCurrentSuggestions(completionDescriptors, currentSearch, editorState) || (0, _immutable.List)();
+	      var allSuggestions = this._getCurrentDescriptor(completionDescriptors, currentSearch, editorState) || (0, _immutable.List)();
 
 	      var currentSearchIsEmpty = !currentSearch || currentSearch === '';
 	      var currentFilteredSuggestions = currentSearchIsEmpty ? allSuggestions : allSuggestions.filter(function (suggestion) {
@@ -46453,7 +46453,7 @@
 	      return currentFilteredSuggestions;
 	    }
 	  }, {
-	    key: '_getCurrentSuggestions',
+	    key: '_getCurrentDescriptor',
 	    value: function _getCurrentSuggestions(completionDescriptors, currentSearch, editorState) {
 	      var textEndingWithCurrentSearchPrefix = this._getTextEndingWithCurrentSearchPrefix(currentSearch, editorState);
 
