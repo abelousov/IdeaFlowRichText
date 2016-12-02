@@ -32,7 +32,6 @@ export default class SuggestionComponentWrapper extends Component {
   _getFilteredSuggestions () {
     const currentDescriptor = this._getCurrentDescriptor();
 
-    console.log('>>>> current descriptor: ', currentDescriptor);
     const allSuggestions = currentDescriptor ? currentDescriptor.suggestions : List()
 
     const currentSearch = this.state.currentSearch

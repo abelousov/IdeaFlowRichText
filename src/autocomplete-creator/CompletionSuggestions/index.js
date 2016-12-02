@@ -152,10 +152,6 @@ export default function (addModifier, Entry, suggestionsThemeKey) {
 
       const currentAutocomplete = findCurrentAutocomplete(editorState)
 
-      console.log('>>>> selection: ', selection)
-
-      console.log('>>>> current autocomplete: ', currentAutocomplete);
-
       const searchValue = currentAutocomplete.searchValueWithoutPrefix
       const prefix = currentAutocomplete.prefix
 

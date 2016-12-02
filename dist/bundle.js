@@ -45327,10 +45327,6 @@
 
 	        var currentAutocomplete = findCurrentAutocomplete(editorState);
 
-	        console.log('>>>> selection: ', selection);
-
-	        console.log('>>>> current autocomplete: ', currentAutocomplete);
-
 	        var searchValue = currentAutocomplete.searchValueWithoutPrefix;
 	        var prefix = currentAutocomplete.prefix;
 
@@ -46406,7 +46402,6 @@
 	    value: function _getFilteredSuggestions() {
 	      var currentDescriptor = this._getCurrentDescriptor();
 
-	      console.log('>>>> current descriptor: ', currentDescriptor);
 	      var allSuggestions = currentDescriptor ? currentDescriptor.suggestions : (0, _immutable.List)();
 
 	      var currentSearch = this.state.currentSearch;
@@ -46438,7 +46433,7 @@
 /* 337 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -46451,41 +46446,98 @@
 	}
 
 	function findCurrentAutocomplete(editorState, possiblePrefixes) {
+	  var _getCurrentTextSplitB = _getCurrentTextSplitBySelectionStart(editorState),
+	      textBeforeSelectionStart = _getCurrentTextSplitB.textBeforeSelectionStart,
+	      textAfterSelectionStart = _getCurrentTextSplitB.textAfterSelectionStart;
 
+	  var _extractCurrentPrefix2 = _extractCurrentPrefix(textBeforeSelectionStart, possiblePrefixes),
+	      autocompleteStart = _extractCurrentPrefix2.autocompleteStart,
+	      prefix = _extractCurrentPrefix2.prefix,
+	      valuePartBeforeSelectionStart = _extractCurrentPrefix2.valuePartBeforeSelectionStart;
+
+	  if (!prefix) {
+	    return null;
+	  }
+
+	  var valuePartAfterSelectionStart = _extractValuePartAfterSelectionStart(textBeforeSelectionStart, textAfterSelectionStart);
+
+	  var value = valuePartBeforeSelectionStart + valuePartAfterSelectionStart;
+
+	  var wholeAutocomplete = prefix + value;
+
+	  return {
+	    prefix: prefix,
+	    searchValueWithoutPrefix: value,
+	    selection: _getSelectionForString({ editorState: editorState, startIndex: autocompleteStart, str: wholeAutocomplete })
+	  };
+	}
+
+	function _getCurrentTextSplitBySelectionStart(editorState) {
 	  var currentSelection = editorState.getSelection();
 
 	  var currentContentState = editorState.getCurrentContent();
 	  var currentBlock = currentContentState.getBlockForKey(currentSelection.getStartKey());
 
-	  var blockText = currentBlock.getText();
+	  var wholeText = currentBlock.getText();
 
 	  var selectionStart = currentSelection.getStartOffset();
-	  var textEndingWithSelection = blockText.substring(0, selectionStart);
 
-	  var lastPrefixBeforeCurrentSelection = null;
-	  var lastPrefixIndex = null;
+	  return {
+	    textBeforeSelectionStart: wholeText.substring(0, selectionStart),
+	    textAfterSelectionStart: wholeText.substring(selectionStart)
+	  };
+	}
+
+	function _extractCurrentPrefix(textBeforeSelectionStart, possiblePrefixes) {
+	  var lastPrefixBeforeSelection = null;
+	  var lastPrefixStart = null;
 
 	  possiblePrefixes.map(function (currentPrefix) {
-	    var currentPrefixIndex = textEndingWithSelection.lastIndexOf(currentPrefix);
+	    var currentPrefixStart = textBeforeSelectionStart.lastIndexOf(currentPrefix);
 
-	    if (currentPrefixIndex >= 0) {
-	      if (lastPrefixIndex === null || lastPrefixIndex < currentPrefixIndex) {
-	        lastPrefixIndex = currentPrefixIndex;
-	        lastPrefixBeforeCurrentSelection = currentPrefix;
+	    if (currentPrefixStart >= 0) {
+	      if (lastPrefixStart === null || lastPrefixStart < currentPrefixStart) {
+	        lastPrefixStart = currentPrefixStart;
+	        lastPrefixBeforeSelection = currentPrefix;
 	      }
 	    }
 	  });
 
-	  var textAfterLastPrefix = lastPrefixBeforeCurrentSelection ? textEndingWithSelection.substring(lastPrefixIndex + lastPrefixBeforeCurrentSelection.length) : null;
+	  var prefix = lastPrefixBeforeSelection,
+	      autocompleteStart = lastPrefixStart;
 
-	  return lastPrefixBeforeCurrentSelection ? {
-	    prefix: lastPrefixBeforeCurrentSelection,
-	    searchValueWithoutPrefix: textAfterLastPrefix,
-	    selection: currentSelection.merge({
-	      anchorOffset: lastPrefixIndex,
-	      focusOffset: selectionStart
-	    })
-	  } : null;
+
+	  if (!prefix) {
+	    return {};
+	  }
+
+	  var valuePartBeforeSelectionStart = textBeforeSelectionStart.substring(autocompleteStart + prefix.length);
+
+	  return {
+	    prefix: prefix,
+	    valuePartBeforeSelectionStart: valuePartBeforeSelectionStart,
+	    autocompleteStart: autocompleteStart
+	  };
+	}
+
+	function _extractValuePartAfterSelectionStart(textBeforeSelectionStart, textAfterSelectionStart) {
+	  var wordPartAfterSelectionStart = textAfterSelectionStart.match(/^\w*/)[0];
+	  var wordPartBeforeSelectionStart = textBeforeSelectionStart.match(/\w*$/)[0];
+
+	  var selectionStartIsInsideWord = wordPartBeforeSelectionStart.length > 0 && wordPartAfterSelectionStart.length > 0;
+
+	  return selectionStartIsInsideWord ? wordPartAfterSelectionStart : '';
+	}
+
+	function _getSelectionForString(_ref) {
+	  var editorState = _ref.editorState,
+	      startIndex = _ref.startIndex,
+	      str = _ref.str;
+
+	  return editorState.getSelection().merge({
+	    anchorOffset: startIndex,
+	    focusOffset: startIndex + str.length
+	  });
 	}
 
 /***/ },
