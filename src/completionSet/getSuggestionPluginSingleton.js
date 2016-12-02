@@ -1,4 +1,6 @@
-import completionPluginCreator from 'draft-js-autocomplete-plugin-creator'
+// use local coppoy of autocomplete-creator until we turn it into a fork
+// import completionPluginCreator from 'draft-js-autocomplete-plugin-creator'
+import completionPluginCreator from '../autocomplete-creator'
 
 import suggestionInserter from './suggestionInserter'
 import SuggestionEntryComponent from './SuggestionEntryComponent'
