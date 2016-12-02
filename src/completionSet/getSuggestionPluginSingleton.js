@@ -2,7 +2,7 @@
 // import completionPluginCreator from 'draft-js-autocomplete-plugin-creator'
 import completionPluginCreator from '../autocomplete-creator'
 
-import suggestionInserter from './suggestionInserter'
+import createSuggestionInserter from './suggestionInserter'
 import SuggestionEntryComponent from './SuggestionEntryComponent'
 import findWithRegex from 'find-with-regex'
 
@@ -14,29 +14,32 @@ const themeKey = 'suggestions'
 // singleton is a workaround - somehow if several instances of the plugin are created,
 // it stops working - looks like it uses some global stat
 // TODO: post a bug to 'draft-js-autocomplete-plugin-creator' and add link here
-export default ({suggestionRegex}) => {
+export default ({suggestionRegex, findCurrentAutocomplete}) => {
   if(!pluginSingleton) {
     pluginSingleton = createSuggestionPlugin()
   }
 
-  regexSingleton = suggestionRegex
+  currentRegex = suggestionRegex
+  currentAutocompleteFinder = findCurrentAutocomplete
 
   return pluginSingleton
 }
 
-
 let pluginSingleton
-let regexSingleton
+let currentRegex
+let currentAutocompleteFinder
 
 const createSuggestionPlugin = () => {
   //this looks like a strategy to check for start of autocompleted entities
   const completionSuggestionStrategy = (contentBlock, callback) => {
-    findWithRegex(regexSingleton, contentBlock, callback);
+    findWithRegex(currentRegex, contentBlock, callback);
   };
+
+  const findCurrentAutocomplete = (editorState) => currentAutocompleteFinder(editorState)
 
   const completionPluginFactory = completionPluginCreator(
     completionSuggestionStrategy,
-    suggestionInserter,
+    createSuggestionInserter(findCurrentAutocomplete),
     SuggestionEntryComponent,
     themeKey
   )

@@ -1,16 +1,17 @@
 import {Modifier, EditorState, Entity} from 'draft-js';
 import constants from '../constants'
-import getSearchText from './utils/getSearchText';
 
-export default (editorState, suggestion) => {
-  const currentSelectionState = editorState.getSelection();
-  const { begin, end } = getSearchText(editorState, currentSelectionState);
+const createInserter = (findCurrentAutocomplete) =>
+  (editorState, suggestion) => insertSuggestion(editorState, suggestion, findCurrentAutocomplete)
+
+export default createInserter
+
+function insertSuggestion (editorState, suggestion, findCurrentAutocomplete) {
+
+  const currentAutocomplete = findCurrentAutocomplete(editorState)
 
   // get selection of the suggestion search text
-  const suggestionTextSelection = currentSelectionState.merge({
-    anchorOffset: begin,
-    focusOffset: end,
-  });
+  const suggestionTextSelection = currentAutocomplete.selection
 
   const newContent = suggestion.getTextForEditor();
 
@@ -24,9 +25,9 @@ export default (editorState, suggestion) => {
   // a smooth writing experience.
   const blockKey = suggestionTextSelection.getAnchorKey()
   const blockSize = editorState.getCurrentContent().getBlockForKey(blockKey).getLength()
-  const needAddSpace = blockSize === end;
+  const needAddSpace = blockSize === suggestionTextSelection.getFocusOffset();
 
-  let newTextSelection = suggestionTextSelection.merge({focusOffset: begin + newContent.length})
+  let newTextSelection = suggestionTextSelection.merge({focusOffset: suggestionTextSelection.getAnchorOffset() + newContent.length})
 
   const key = Entity.create(constants.ENTITY_TYPE, 'IMMUTABLE', {
     completionType: suggestion.getType()
@@ -68,4 +69,4 @@ export default (editorState, suggestion) => {
 
   return updatedEditorState;
 
-};
+}

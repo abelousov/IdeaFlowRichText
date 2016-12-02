@@ -7,29 +7,35 @@ export default class SuggestionComponentWrapper extends Component {
     super(props)
 
     this.state = {
-      currentSearch: null
+      currentSearch: null,
+      currentPrefix: null
     }
   }
 
-  onSearchChange = ({value}) => {
+  onSearchChange = ({value, prefix}) => {
     this.setState({
-      currentSearch: value
+      currentSearch: value,
+      currentPrefix: prefix
     });
   }
 
   render () {
-    const {SuggestionComponent, completionDescriptors, editorState} = this.props
-
-    const currentSearch = this.state.currentSearch;
+    const {SuggestionComponent, findCurrentAutocomplete} = this.props
 
     return <SuggestionComponent
+      findCurrentAutocomplete={findCurrentAutocomplete}
       onSearchChange={this.onSearchChange}
-      suggestions={this._getFilteredSuggestions(currentSearch, completionDescriptors, editorState)}
+      suggestions={this._getFilteredSuggestions()}
     />
   }
 
-  _getFilteredSuggestions (currentSearch, completionDescriptors, editorState) {
-    const allSuggestions = this._getCurrentSuggestions(completionDescriptors, currentSearch, editorState) || List()
+  _getFilteredSuggestions () {
+    const currentDescriptor = this._getCurrentDescriptor();
+
+    console.log('>>>> current descriptor: ', currentDescriptor);
+    const allSuggestions = currentDescriptor ? currentDescriptor.suggestions : List()
+
+    const currentSearch = this.state.currentSearch
 
     const currentSearchIsEmpty = !currentSearch || currentSearch === '';
     const currentFilteredSuggestions = currentSearchIsEmpty
@@ -39,34 +45,7 @@ export default class SuggestionComponentWrapper extends Component {
     return currentFilteredSuggestions;
   }
 
-  _getCurrentSuggestions (completionDescriptors, currentSearch, editorState) {
-    const textEndingWithCurrentSearchPrefix = this._getTextEndingWithCurrentSearchPrefix(currentSearch, editorState)
-
-    let currentSuggestions
-
-    completionDescriptors.map((descriptor) => {
-      if(textEndingWithCurrentSearchPrefix.endsWith(descriptor.prefix)) {
-        currentSuggestions = descriptor.suggestions
-      }
-    })
-
-    return currentSuggestions
-  }
-
-  _getTextEndingWithCurrentSearchPrefix (currentSearch, editorState) {
-    if (!currentSearch) {
-      currentSearch = ''
-    }
-
-    const currentSelection = editorState.getSelection();
-
-    const currentContentState = editorState.getCurrentContent()
-    const currentBlock = currentContentState.getBlockForKey(currentSelection.getStartKey())
-
-    const blockText = currentBlock.getText()
-
-    const searchStartIndex = currentSelection.getStartOffset() - currentSearch.length
-
-    return blockText.substring(0, searchStartIndex)
+  _getCurrentDescriptor () {
+    return this.props.completionDescriptors.filter((descriptor) => descriptor.prefix === this.state.currentPrefix)[0]
   }
 }

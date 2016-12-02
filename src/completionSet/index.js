@@ -3,11 +3,17 @@ import React, {Component, PropTypes} from 'react';
 import SuggestionComponentWrapper from './SuggestionComponentWrapper'
 import constants from '../constants'
 import {Entity} from 'draft-js';
+import createAutocompleteFinder from './findCurrentAutocomplete'
 
 export default {
   create (completionDescriptors, editorState) {
+    const prefixes = completionDescriptors.map((descriptor) => descriptor.prefix)
+
+    const findCurrentAutocomplete = createAutocompleteFinder(prefixes)
+
     const completionPlugin = getSuggestionPluginSingleton({
-      suggestionRegex: _getSuggestionRegex(completionDescriptors)
+      suggestionRegex: _getSuggestionRegex(completionDescriptors),
+      findCurrentAutocomplete
     })
 
     const decorators = completionDescriptors.map((descriptor) => _createDecorator(descriptor.type))
@@ -15,7 +21,8 @@ export default {
     const renderedSuggestionComponent = _renderSuggestionComponent(
       completionDescriptors,
       completionPlugin.CompletionSuggestions,
-      editorState
+      editorState,
+      findCurrentAutocomplete
     )
 
     return {
@@ -34,11 +41,12 @@ function _getSuggestionRegex(completionDescriptors) {
   return new RegExp(`(\\W|^)${prefixesUnionGroup}(\\w|\\s)*(?!${prefixesUnionGroup})`, 'g')
 }
 
-function _renderSuggestionComponent(completionDescriptors, SuggestionComponent, editorState) {
+function _renderSuggestionComponent(completionDescriptors, SuggestionComponent, editorState, findCurrentAutocomplete) {
   return <SuggestionComponentWrapper
     completionDescriptors={completionDescriptors}
     SuggestionComponent={SuggestionComponent}
     editorState={editorState}
+    findCurrentAutocomplete={findCurrentAutocomplete}
   />
 }
 

@@ -148,11 +148,21 @@ export default function (addModifier, Entry, suggestionsThemeKey) {
     };
 
     onSearchChange = (editorState, selection) => {
-      const { word } = getSearchText(editorState, selection);
-      const searchValue = word.substring(1, word.length);
-      if (this.lastSearchValue !== searchValue) {
-        this.lastSearchValue = searchValue;
-        this.props.onSearchChange({ value: searchValue });
+      const findCurrentAutocomplete = this.props.findCurrentAutocomplete
+
+      const currentAutocomplete = findCurrentAutocomplete(editorState)
+
+      console.log('>>>> selection: ', selection)
+
+      console.log('>>>> current autocomplete: ', currentAutocomplete);
+
+      const searchValue = currentAutocomplete.searchValueWithoutPrefix
+      const prefix = currentAutocomplete.prefix
+
+      if (this.lastSearchValue !== searchValue || this.lastPrefix !== prefix) {
+        this.lastSearchValue = searchValue
+        this.lastPrefix = prefix
+        this.props.onSearchChange({ value: searchValue, prefix });
       }
     };
 
